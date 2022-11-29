@@ -109,8 +109,7 @@
             <div class="d-flex align-items-center">
                 <!--begin::Avatar-->
                 <div class="symbol symbol-circle symbol-40px">
-                    <img src="https://preview.keenthemes.com/metronic8/demo10/assets/media/avatars/300-1.jpg"
-                        alt="photo" />
+                    <img src="{{asset('assets/media/avatars/central_farma_logo.png')}}"alt="photo" />
                 </div>
                 <!--end::Avatar-->
                 <!--begin::User info-->
