@@ -166,7 +166,7 @@
                     <!--end::Menu separator-->
                     <!--begin::Menu item-->
                     <div class="menu-item px-5">
-                        <a href="account/overview.html" class="menu-link px-5">My Profile</a>
+                        <a href="account/overview.html" class="menu-link px-5">Meu Perfil</a>
                     </div>
                     <!--end::Menu item-->
                     <!--begin::Menu separator-->
@@ -174,7 +174,7 @@
                     <!--end::Menu separator-->
                     <!--begin::Menu item-->
                     <div class="menu-item px-5">
-                        <a href="{{ route('logout.perform') }}" class="menu-link px-5">Sign Out</a>
+                        <a href="{{ route('logout.perform') }}" class="menu-link px-5">Sair</a>
                     </div>
                     <!--end::Menu item-->
                 </div>
