@@ -16,7 +16,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('filemanager',function() {
+            return new \App\Helpers\FileManager;
+        });
     }
 
     /**

@@ -6,11 +6,13 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Presenters\UserPresenter;
 
 class User extends Authenticatable
 {   
     use SoftDeletes;
     use Notifiable;
+    use UserPresenter;
 
     protected $table      = 'users';
     protected $primaryKey = 'id';

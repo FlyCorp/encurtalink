@@ -37,6 +37,17 @@ class UserController extends Controller
 
     public function postEdit(PostUpdateUser $request)
     {   
+        if ($request->avatar) {
+            $avatar = sprintf('%s.%s', (string) \Illuminate\Support\Str::uuid(), $request->avatar->getClientOriginalExtension());
+            $request->avatar_name=$avatar;
+            
+            $upload = \Storage::disk(\FileManager::getFileSystem())->put(sprintf('%s/%s', 'usuarios/avatar', $avatar), fopen(request()->avatar, 'r+'), 'public');
+
+            if(!$upload){
+                throw new \Exception('Erro ao realizar o upload da foto de perfil');
+            }
+        }
+
         $this->userMain->find($request->id)->update($this->sanitizerUser->postEdit($request->all()));
     }
 

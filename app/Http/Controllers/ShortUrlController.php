@@ -31,8 +31,11 @@ class ShortUrlController extends Controller
     }
 
     public function getUrl($code)
-    {
-        return redirect($this->shortUrl->where('code', $code)->first()->link);
+    {   
+        dd($code);
+        $result=$this->shortUrl->where('code', $code)->first();
+        dd($result);
+        return redirect();
     }
 
     public function postEdit(PostUpdateShortUrl $request)
@@ -78,7 +81,7 @@ class ShortUrlController extends Controller
                 [
                     'id'            => $item->id,
                     'code'          => $item->code,
-                    'link'          => route('web.getUrl', $item->code),
+                    'link'          => route('getUrl', $item->code),
                     'description'   => $item->description,
                 ];
         }

@@ -8,35 +8,35 @@ $(function () {
     |--------------------------------------------------------------------------
     */
     let table = $('.datatable-user')
-    .DataTable({
-        responsive: true,
-        searchDelay: 500,
-        processing: true,
-        serverSide: true,
-        ajax: {
-            url: `/user/buscar`,
-            type: 'GET',
-            data: function (data){
-                data.term  = $('#search-term').val()
+        .DataTable({
+            responsive: true,
+            searchDelay: 500,
+            processing: true,
+            serverSide: true,
+            ajax: {
+                url: `/user/buscar`,
+                type: 'GET',
+                data: function (data) {
+                    data.term = $('#search-term').val()
+                },
             },
-        },
-        columnDefs:
-        [
-            {targets:  0, orderable: true,  width: '120px'},
-            {targets:  1, orderable: true},
-            {targets:  2, orderable: false},
-            {targets:  3, orderable: false, class:'text-center'},
-        ],
-        columns:
-        [
+            columnDefs:
+                [
+                    { targets: 0, orderable: true, width: '120px' },
+                    { targets: 1, orderable: true },
+                    { targets: 2, orderable: false },
+                    { targets: 3, orderable: false, class: 'text-center' },
+                ],
+            columns:
+                [
 
-            {data: 'id'},
-            {data: 'name'},
-            {data: 'email'},
-            {
-                data: function(data, type, row, meta){
-                    
-                    return `<div class="d-flex justify-content-end flex-shrink-0">
+                    { data: 'id' },
+                    { data: 'name' },
+                    { data: 'email' },
+                    {
+                        data: function (data, type, row, meta) {
+
+                            return `<div class="d-flex justify-content-end flex-shrink-0">
                                 <a title="Editar Usuário" href="tables.html#" data-bs-toggle="modal" data-bs-target="#kt_modal_edit_card" class="btn btn-icon btn-bg-light btn-active-color-warning btn-sm me-1"
                                 data-id="${data.id}" data-name="${data.name}" data-email="${data.email}">
                                     <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
@@ -61,17 +61,17 @@ $(function () {
                                     <!--end::Svg Icon-->
                                 </a>
                             </div>`;
-                }
-            },
+                        }
+                    },
 
-        ],
-        lengthMenu: [10, 25, 50, 100],
-        iDisplayLength: 25,
-        language:
-        {
-            url: "/assets/plugins/custom/datatables/pt-BR.json",
-        },
-    });
+                ],
+            lengthMenu: [10, 25, 50, 100],
+            iDisplayLength: 25,
+            language:
+            {
+                url: "/assets/plugins/custom/datatables/pt-BR.json",
+            },
+        });
 
     /*
     |--------------------------------------------------------------------------
@@ -85,15 +85,15 @@ $(function () {
         var form;
         var modal;
         var modalEl;
-        
+
         // Init form inputs
-        var initForm = function() {
+        var initForm = function () {
         }
-    
+
         // Handle form validation and submittion
-        var handleForm = function() {
+        var handleForm = function () {
             // Stepper custom navigation
-    
+
             // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
             validator = FormValidation.formValidation(
                 form,
@@ -114,7 +114,7 @@ $(function () {
                             }
                         },
                     },
-                    
+
                     plugins: {
                         trigger: new FormValidation.plugins.Trigger(),
                         bootstrap: new FormValidation.plugins.Bootstrap5({
@@ -125,33 +125,33 @@ $(function () {
                     }
                 }
             );
-    
+
             // Action buttons
             submitButton.addEventListener('click', function (e) {
                 // Prevent default button action
                 e.preventDefault();
-    
+
                 var formData = new FormData(document.querySelector('#kt_modal_new_card_form'));
-    
+
                 // Validate form before submit
                 if (validator) {
                     validator.validate().then(function (status) {
-    
+
                         if (status == 'Valid') {
                             // Show loading indication
                             submitButton.setAttribute('data-kt-indicator', 'on');
-    
+
                             // Disable button to avoid multiple click 
                             submitButton.disabled = true;
-    
+
                             // Simulate form submission. For more info check the plugin's official documentation: https://sweetalert2.github.io/
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 // Remove loading indication
                                 submitButton.removeAttribute('data-kt-indicator');
-    
+
                                 // Enable button
                                 submitButton.disabled = false;
-    
+
                                 $.ajax({
                                     headers: {
                                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -163,7 +163,7 @@ $(function () {
                                     processData: false,
                                     contentType: false,
                                     success: function (response) {
-                                        
+
                                         //User feedback
                                         Swal.fire({
                                             text: "O link foi inserido com sucesso!",
@@ -174,7 +174,7 @@ $(function () {
                                                 confirmButton: "btn btn-primary"
                                             }
                                         });
-                                        
+
                                         //reload table
                                         table.draw();
                                         //hide modal
@@ -182,21 +182,21 @@ $(function () {
                                     },
                                     error: function (response, status, message) {
                                         switch (true) {
-                                            case (response.status==422):
-                                                    $.each(response.responseJSON.errors, function (index, element) { 
-                                                        toastr.warning(element[0]);
-                                                    });
+                                            case (response.status == 422):
+                                                $.each(response.responseJSON.errors, function (index, element) {
+                                                    toastr.warning(element[0]);
+                                                });
                                                 break;
-                                        
+
                                             default:
-                                                    toastr.error("Opss...ocorreu um erro. Contacte o suporte!");
+                                                toastr.error("Opss...ocorreu um erro. Contacte o suporte!");
                                                 break;
                                         }
                                     },
                                     timeout: 5000
                                 });
-    
-                            }, 2000);   						
+
+                            }, 2000);
                         } else {
 
                             Swal.fire({
@@ -212,10 +212,10 @@ $(function () {
                     });
                 }
             });
-    
+
             cancelButton.addEventListener('click', function (e) {
                 e.preventDefault();
-    
+
                 Swal.fire({
                     text: "Tem certeza que deseja cancelar?",
                     icon: "warning",
@@ -237,23 +237,23 @@ $(function () {
                 });
             });
         }
-    
+
         return {
             // Public functions
             init: function () {
                 // Elements
                 modalEl = document.querySelector('#kt_modal_new_card');
-    
+
                 if (!modalEl) {
                     return;
                 }
-    
+
                 modal = new bootstrap.Modal(modalEl);
-    
+
                 form = document.querySelector('#kt_modal_new_card_form');
                 submitButton = document.getElementById('kt_modal_new_card_submit');
                 cancelButton = document.getElementById('kt_modal_new_card_cancel');
-    
+
                 initForm();
                 handleForm();
             }
@@ -261,7 +261,7 @@ $(function () {
     }();
 
     KTModalNewCard.init();
-    
+
     /*
     |--------------------------------------------------------------------------
     | Modal edit link
@@ -274,16 +274,16 @@ $(function () {
         var form;
         var modal;
         var modalEl;
-        
+
         // Init form inputs
-        var initForm = function() {
-            
+        var initForm = function () {
+
         }
-    
+
         // Handle form validation and submittion
-        var handleForm = function() {
+        var handleForm = function () {
             // Stepper custom navigation
-    
+
             // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
             validator = FormValidation.formValidation(
                 form,
@@ -303,8 +303,35 @@ $(function () {
                                 }
                             }
                         },
+                        /* 'currentpassword': {
+                            validators: {
+                                notEmpty: {
+                                    message: 'A Senha Atual é obrigatória'
+                                }
+                            }
+                        },
+                        'newpassword': {
+                            validators: {
+                                notEmpty: {
+                                    message: 'A Nova Senha é obrigatória'
+                                }
+                            }
+                        },
+                        'confirmpassword': {
+                            validators: {
+                                notEmpty: {
+                                    message: 'A Confirmação da Senha é obrigatória'
+                                },
+                                identical: {
+                                    compare: function () {
+                                        return form.querySelector('[name="newpassword"]').value;
+                                    },
+                                    message: 'A Nova Senha e a Confirmação da Senha, não são iguais'
+                                }
+                            }
+                        }, */
                     },
-                    
+
                     plugins: {
                         trigger: new FormValidation.plugins.Trigger(),
                         bootstrap: new FormValidation.plugins.Bootstrap5({
@@ -315,30 +342,30 @@ $(function () {
                     }
                 }
             );
-    
+
             // Action buttons
             submitButton.addEventListener('click', function (e) {
                 // Prevent default button action
                 e.preventDefault();
-    
+
                 var formData = new FormData(document.querySelector('#kt_modal_new_update_form'));
-                
+
                 // Validate form before submit
                 if (validator) {
                     validator.validate().then(function (status) {
-    
+
                         if (status == 'Valid') {
                             // Show loading indication
                             submitButton.setAttribute('data-kt-indicator', 'on');
-    
+
                             // Disable button to avoid multiple click 
                             submitButton.disabled = true;
-    
+
                             // Simulate form submission. For more info check the plugin's official documentation: https://sweetalert2.github.io/
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 // Remove loading indication
                                 submitButton.removeAttribute('data-kt-indicator');
-    
+
                                 // Enable button
                                 submitButton.disabled = false;
                                 //console.log(formData.get('id')); return false;
@@ -353,7 +380,7 @@ $(function () {
                                     processData: false,
                                     contentType: false,
                                     success: function (response) {
-                                        
+
                                         //User feedback
                                         Swal.fire({
                                             text: "O link foi editados com sucesso!",
@@ -364,7 +391,7 @@ $(function () {
                                                 confirmButton: "btn btn-primary"
                                             }
                                         });
-                                        
+
                                         //reload table
                                         table.draw();
                                         //hide modal
@@ -372,21 +399,21 @@ $(function () {
                                     },
                                     error: function (response, status, message) {
                                         switch (true) {
-                                            case (response.status==422):
-                                                    $.each(response.responseJSON.errors, function (index, element) { 
-                                                        toastr.warning(element[0]);
-                                                    });
+                                            case (response.status == 422):
+                                                $.each(response.responseJSON.errors, function (index, element) {
+                                                    toastr.warning(element[0]);
+                                                });
                                                 break;
-                                        
+
                                             default:
-                                                    toastr.error("Opss...ocorreu um erro. Contacte o suporte!");
+                                                toastr.error("Opss...ocorreu um erro. Contacte o suporte!");
                                                 break;
                                         }
                                     },
                                     timeout: 5000
                                 });
-    
-                            }, 2000);   						
+
+                            }, 2000);
                         } else {
 
                             Swal.fire({
@@ -402,10 +429,10 @@ $(function () {
                     });
                 }
             });
-    
+
             cancelButton.addEventListener('click', function (e) {
                 e.preventDefault();
-    
+
                 Swal.fire({
                     text: "Tem certeza que deseja cancelar?",
                     icon: "warning",
@@ -427,23 +454,23 @@ $(function () {
                 });
             });
         }
-    
+
         return {
             // Public functions
             init: function () {
                 // Elements
                 modalEl = document.querySelector('#kt_modal_edit_card');
-    
+
                 if (!modalEl) {
                     return;
                 }
-    
+
                 modal = new bootstrap.Modal(modalEl);
-    
+
                 form = document.querySelector('#kt_modal_new_update_form');
                 submitButton = document.getElementById('kt_modal_new_update_submit');
                 cancelButton = document.getElementById('kt_modal_new_update_cancel');
-    
+
                 initForm();
                 handleForm();
             }
@@ -457,13 +484,13 @@ $(function () {
     | Field events
     |--------------------------------------------------------------------------
     */
-    $(document).on('keyup', `input#search-term`,function (e) {
+    $(document).on('keyup', `input#search-term`, function (e) {
         table.draw();
     });
 
-    $(document).on('click', `a.delete-url`,function (e) {
+    $(document).on('click', `a.delete-url`, function (e) {
         let button = $(this);
-        
+
         Swal.fire({
             title: `Deseja mesmo remover <u>${button.data().name}</u>?`,
             icon: "warning",
@@ -483,11 +510,11 @@ $(function () {
                     },
                     type: "POST",
                     url: `/user/${button.data().id}/excluir`,
-                    data:{
-                        "id":button.data().id
+                    data: {
+                        "id": button.data().id
                     },
                     success: function (response) {
-                        
+
                         //User feedback
                         Swal.fire({
                             text: "O link foi excluído com sucesso!",
@@ -498,20 +525,20 @@ $(function () {
                                 confirmButton: "btn btn-primary"
                             }
                         });
-                        
+
                         //reload table
                         table.draw();
                     },
                     error: function (response, status, message) {
                         switch (true) {
-                            case (response.status==422):
-                                    $.each(response.responseJSON.errors, function (index, element) { 
-                                        toastr.warning(element[0]);
-                                    });
+                            case (response.status == 422):
+                                $.each(response.responseJSON.errors, function (index, element) {
+                                    toastr.warning(element[0]);
+                                });
                                 break;
-                        
+
                             default:
-                                    toastr.error("Opss...ocorreu um erro. Contacte o suporte!");
+                                toastr.error("Opss...ocorreu um erro. Contacte o suporte!");
                                 break;
                         }
                     },
@@ -530,10 +557,120 @@ $(function () {
     $(document).on('show.bs.modal', '#kt_modal_edit_card', function (event) {
         let button = $(event.relatedTarget);
         let modal = $(this);
-     
+
 
         modal.find('input[name="id"]').val(button.data().id);
         modal.find('input[name="name"]').val(button.data().name);
         modal.find('input[name="email"]').val(button.data().email);
     });
+
+
+    let handleChangePassword = function (e) {
+        var validation;
+
+        // form elements
+        var passwordForm = document.getElementById('kt_signin_change_password');
+
+        if (!passwordForm) {
+            return;
+        }
+        
+
+        validation = FormValidation.formValidation(
+            passwordForm,
+            {
+                fields: {
+                    currentpassword: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Current Password is required'
+                            }
+                        }
+                    },
+
+                    newpassword: {
+                        validators: {
+                            notEmpty: {
+                                message: 'New Password is required'
+                            }
+                        }
+                    },
+
+                    confirmpassword: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Confirm Password is required'
+                            },
+                            identical: {
+                                compare: function () {
+                                    return passwordForm.querySelector('[name="newpassword"]').value;
+                                },
+                                message: 'The password and its confirm are not the same'
+                            }
+                        }
+                    },
+                },
+
+                plugins: { //Learn more: https://formvalidation.io/guide/plugins
+                    trigger: new FormValidation.plugins.Trigger(),
+                    bootstrap: new FormValidation.plugins.Bootstrap5({
+                        rowSelector: '.fv-row'
+                    })
+                }
+            }
+        );
+
+        passwordForm.querySelector('#kt_password_submit').addEventListener('click', function (e) {
+            e.preventDefault();
+            console.log('click');
+
+            validation.validate().then(function (status) {
+                if (status == 'Valid') {
+                    swal.fire({
+                        text: "Sent password reset. Please check your email",
+                        icon: "success",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn font-weight-bold btn-light-primary"
+                        }
+                    }).then(function () {
+                        passwordForm.reset();
+                        validation.resetForm(); // Reset formvalidation --- more info: https://formvalidation.io/guide/api/reset-form/
+                        toggleChangePassword();
+                    });
+                } else {
+                    swal.fire({
+                        text: "Sorry, looks like there are some errors detected, please try again.",
+                        icon: "error",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn font-weight-bold btn-light-primary"
+                        }
+                    });
+                }
+            });
+        });
+    }
+
+    // Public methods
+    return {
+        init: function () {
+            signInForm = document.getElementById('kt_signin_change_email');
+            signInMainEl = document.getElementById('kt_signin_email');
+            signInEditEl = document.getElementById('kt_signin_email_edit');
+            passwordMainEl = document.getElementById('kt_signin_password');
+            passwordEditEl = document.getElementById('kt_signin_password_edit');
+            signInChangeEmail = document.getElementById('kt_signin_email_button');
+            signInCancelEmail = document.getElementById('kt_signin_cancel');
+            passwordChange = document.getElementById('kt_signin_password_button');
+            passwordCancel = document.getElementById('kt_password_cancel');
+
+            initSettings();
+            handleChangeEmail();
+            handleChangePassword();
+        }
+    }
+
 });

@@ -10,10 +10,11 @@ class PostUpdateUser extends FormRequest
     public function rules()
     {
         return
-            [   
-                'id'    => 'required|exists:users,id',
-                'name'  => 'required',
-                'email' => 'required',
+            [
+                'id'     => 'required|exists:users,id',
+                'name'   => 'required',
+                'email'  => 'required',
+                'avatar' => 'mimes:jpeg,png,jpg|max:1024',
             ];
     }
 
@@ -25,6 +26,9 @@ class PostUpdateUser extends FormRequest
             'name.required'                     => 'O nome é obrigatório',
             'email.required'                    => 'O email é obrigatória',
             'email.exists'                      => 'E-mail duplicado',
+            //'avatar.required'        => 'O documento com foto é obrigatório',
+            'avatar.image'           => 'Somente arquivos de imagem(jpeg,png,jpg)',
+            'avatar.max'             => 'O tamanho máximo da imagem é de :max MB',
         ];
     }
 

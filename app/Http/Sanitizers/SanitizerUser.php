@@ -19,10 +19,11 @@ class SanitizerUser
     public function postEdit(array $data)
     {   
         $name = $this->trimAll($data['name']);
-
+        
         return [
             'name' => mb_convert_case($name, MB_CASE_TITLE, 'UTF-8'),
             'email' => $data['email'],
+            'avatar' =>$data['avatar_name']
         ];
     }
 
