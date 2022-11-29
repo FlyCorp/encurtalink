@@ -35,10 +35,10 @@ $(function () {
                     { data: 'email' },
                     {
                         data: function (data, type, row, meta) {
-
+                            console.log(data)
                             return `<div class="d-flex justify-content-end flex-shrink-0">
                                 <a title="Editar Usuário" href="tables.html#" data-bs-toggle="modal" data-bs-target="#kt_modal_edit_card" class="btn btn-icon btn-bg-light btn-active-color-warning btn-sm me-1"
-                                data-id="${data.id}" data-name="${data.name}" data-email="${data.email}">
+                                data-id="${data.id}" data-name="${data.name}" data-email="${data.email}" data-avatar="${data.avatar}">
                                     <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
                                     <span class="svg-icon svg-icon-3">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +49,7 @@ $(function () {
                                     <!--end::Svg Icon-->
                                 </a>
                                 <a title="Excluir Usuário" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm delete-url"
-                                data-id="${data.id}" data-name="${data.name}" data-email="${data.email}">
+                                data-id="${data.id}" data-name="${data.name}">
                                     <!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
                                     <span class="svg-icon svg-icon-3">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -562,6 +562,7 @@ $(function () {
         modal.find('input[name="id"]').val(button.data().id);
         modal.find('input[name="name"]').val(button.data().name);
         modal.find('input[name="email"]').val(button.data().email);
+        
     });
 
 

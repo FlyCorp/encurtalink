@@ -3,7 +3,7 @@
 <html lang="en">
 	<!--begin::Head-->
 	<head>
-		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular & Laravel by Keenthemes</title>
+		<title>CentralFarma - Encurtador de Links</title>
 		<meta charset="utf-8" />
 		<meta name="csrf-token" content="{{ Session::token() }}">
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Blazor, Django, Flask & Laravel versions. Grab your copy now and get life-time updates for free." />
@@ -15,7 +15,7 @@
 		<meta property="og:url" content="https://keenthemes.com/metronic" />
 		<meta property="og:site_name" content="Keenthemes | Metronic" />
 		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href="{{asset('assets/media/avatars/central_farma_logo.png')}}" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 		<!--end::Fonts-->
@@ -67,12 +67,6 @@
 									</div>
 								</div>
 								<!--end::Aside toggle-->
-								<!--begin::Logo-->
-								<a href="index.html">
-									<img alt="Logo" src="assets/media/logos/default-dark.svg" class="h-25px h-lg-30px d-none d-md-block" />
-									<img alt="Logo" src="assets/media/logos/default-small.svg" class="h-25px d-block d-md-none" />
-								</a>
-								<!--end::Logo-->
 							</div>
 							<!--end::Brand-->
 							<!--begin::Topbar-->

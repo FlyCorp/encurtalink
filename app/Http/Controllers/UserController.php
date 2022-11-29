@@ -36,19 +36,16 @@ class UserController extends Controller
     }
 
     public function postEdit(PostUpdateUser $request)
-    {   
-        if ($request->avatar) {
-            $avatar = sprintf('%s.%s', (string) \Illuminate\Support\Str::uuid(), $request->avatar->getClientOriginalExtension());
-            $request->avatar_name=$avatar;
-            
-            $upload = \Storage::disk(\FileManager::getFileSystem())->put(sprintf('%s/%s', 'usuarios/avatar', $avatar), fopen(request()->avatar, 'r+'), 'public');
+    {      
+        $objects=[
+            'name'=>$request->name,
+            'email'=>$request->email,
+        ];
 
-            if(!$upload){
-                throw new \Exception('Erro ao realizar o upload da foto de perfil');
-            }
-        }
+        $image =  base64_encode(file_get_contents($request->file('avatar')));
+        $objects['avatar_name'] = $image;
 
-        $this->userMain->find($request->id)->update($this->sanitizerUser->postEdit($request->all()));
+        $this->userMain->find($request->id)->update($this->sanitizerUser->postEdit($objects));
     }
 
     public function postDelete(PostDeleteUser $request)
@@ -85,17 +82,20 @@ class UserController extends Controller
                 'recordsFiltered' => $collectionTotal,
             ];
         foreach ($collection as $item) {
+            
             $collectionData[] =
                 [
                     'id'            => $item->id,
                     'name'          => $item->name,
                     'email'         => $item->email,
+                    'avatar'        => "data:image/png;base64, ".base64_encode($item->avatar) 
                 ];
+               
         }
 
         $collectionFilter['data'] = $collectionData;
 
-
+        
         return response()->json($collectionFilter);
     }
 

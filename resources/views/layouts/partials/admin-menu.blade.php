@@ -109,8 +109,7 @@
             <div class="d-flex align-items-center">
                 <!--begin::Avatar-->
                 <div class="symbol symbol-circle symbol-40px">
-                    <img src="https://preview.keenthemes.com/metronic8/demo10/assets/media/avatars/300-1.jpg"
-                        alt="photo" />
+                    <img src="{{asset('assets/media/avatars/central_farma_logo.png')}}"alt="photo" />
                 </div>
                 <!--end::Avatar-->
                 <!--begin::User info-->
@@ -167,7 +166,7 @@
                     <!--end::Menu separator-->
                     <!--begin::Menu item-->
                     <div class="menu-item px-5">
-                        <a href="account/overview.html" class="menu-link px-5">My Profile</a>
+                        <a href="account/overview.html" class="menu-link px-5">Meu Perfil</a>
                     </div>
                     <!--end::Menu item-->
                     <!--begin::Menu separator-->
@@ -175,7 +174,7 @@
                     <!--end::Menu separator-->
                     <!--begin::Menu item-->
                     <div class="menu-item px-5">
-                        <a href="{{ route('logout.perform') }}" class="menu-link px-5">Sign Out</a>
+                        <a href="{{ route('logout.perform') }}" class="menu-link px-5">Sair</a>
                     </div>
                     <!--end::Menu item-->
                 </div>
