@@ -88,7 +88,7 @@
                             <div id="kt_subscriptions_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                                 <div class="table-responsive">
                                     <table
-                                        class="table datatable-urls align-middle table-row-dashed fs-6 gy-5 dataTable no-footer"
+                                        class="table datatable-user align-middle table-row-dashed fs-6 gy-5 dataTable no-footer"
                                         id="kt_subscriptions_table">
                                         <!--begin::Table head-->
                                         <thead>

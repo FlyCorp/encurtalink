@@ -29,17 +29,17 @@
                     <input type="hidden" name="id">
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
-                        <h1 class="mb-3">Novo link</h1>
+                        <h1 class="mb-3">Editar Usuário</h1>
                         <!--end::Title-->
                     </div>
                     <!--begin::Input group-->
                     <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
                     <!--begin::Label-->
                     <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
-                        <span class="required">Link</span>
+                        <span class="required">Nome</span>
                     </label>
                     <!--end::Label-->
-                    <input type="text" class="form-control form-control-solid" placeholder="" name="link">
+                    <input type="text" class="form-control form-control-solid" placeholder="Nome" name="name">
                     <div class="fv-plugins-message-container invalid-feedback"></div>
                     </div>
                     <!--end::Input group-->
@@ -47,10 +47,10 @@
                     <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
                     <!--begin::Label-->
                     <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
-                        <span class="required">Descrição</span>
+                        <span class="required">E-mail</span>
                     </label>
                     <!--end::Label-->
-                    <textarea class="form-control form-control-solid" rows="3" name="description" placeholder="Informe uma breve descrição"></textarea>
+                    <input type="text" class="form-control form-control-solid" placeholder="E-mail" name="email">
                     <div class="fv-plugins-message-container invalid-feedback"></div>
                     </div>
                     <!--end::Input group-->

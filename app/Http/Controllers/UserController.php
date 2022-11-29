@@ -2,20 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\ShortUrl;
+use App\Http\Requests\PostCreateUser;
+use App\Http\Requests\PostDeleteUser;
+use App\Http\Requests\PostUpdateUser;
+use App\Http\Sanitizers\SanitizerUser;
 use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     protected $userMain;
-    protected $shortUrl;
-    protected $sanitizerShortUrl;
+    protected $sanitizerUser;
 
     public function __construct()
     {
-        $this->shortUrl= new ShortUrl();
-        $this->userMain= new User();
+        $this->userMain= new User;
+        $this->sanitizerUser= new SanitizerUser;
     }
 
     public function index()
@@ -23,9 +25,9 @@ class UserController extends Controller
         return view('user.index');
     }
 
-    public function postCreate(PostCreateShortUrl $request)
-    {   
-        $this->userMain->create($this->sanitizerShortUrl->postCreate($request->all()));
+    public function postCreate(PostCreateUser $request)
+    {      
+        $this->userMain->create($this->sanitizerUser->postCreate($request->all()));
     }
 
     public function getUrl($code)
@@ -33,12 +35,12 @@ class UserController extends Controller
         return redirect( $this->userMain->where('code', $code)->first()->link);
     }
 
-    public function postEdit(PostUpdateShortUrl $request)
-    {
-        $this->userMain->find($request->id)->update($this->sanitizerShortUrl->postCreate($request->all()));
+    public function postEdit(PostUpdateUser $request)
+    {   
+        $this->userMain->find($request->id)->update($this->sanitizerUser->postEdit($request->all()));
     }
 
-    public function postDelete(PostDeleteShortUrl $request)
+    public function postDelete(PostDeleteUser $request)
     {
         $this->userMain->find($request->id)->delete();
     }
@@ -58,6 +60,7 @@ class UserController extends Controller
 
         if ($queryOrder->column) {
             $collection = $this->userMain->search($queryTerm)
+                ->whereNull('deleted_at')
                 ->orderBy($queryOrder->column, $queryOrder->sort)
                 ->paginate($queryLength, ['*'], 'page', $queryPage);
             $collectionTotal   = $collection->total();

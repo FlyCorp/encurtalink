@@ -7,7 +7,7 @@ $(function () {
     | DataTable 
     |--------------------------------------------------------------------------
     */
-    let table = $('.datatable-urls')
+    let table = $('.datatable-user')
     .DataTable({
         responsive: true,
         searchDelay: 500,
@@ -35,6 +35,7 @@ $(function () {
             {data: 'email'},
             {
                 data: function(data, type, row, meta){
+                    
                     return `<div class="d-flex justify-content-end flex-shrink-0">
                                 <a title="Editar Usuário" href="tables.html#" data-bs-toggle="modal" data-bs-target="#kt_modal_edit_card" class="btn btn-icon btn-bg-light btn-active-color-warning btn-sm me-1"
                                 data-id="${data.id}" data-name="${data.name}" data-email="${data.email}">
@@ -98,17 +99,17 @@ $(function () {
                 form,
                 {
                     fields: {
-                        'link': {
+                        'nome': {
                             validators: {
                                 notEmpty: {
-                                    message: 'O link é obrigatório'
+                                    message: 'O Nome é obrigatório'
                                 }
                             }
                         },
-                        'description': {
+                        'email': {
                             validators: {
                                 notEmpty: {
-                                    message: 'A descrição é obrigatória'
+                                    message: 'A E-mail é obrigatória'
                                 }
                             }
                         },
@@ -156,7 +157,7 @@ $(function () {
                                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                                     },
                                     type: "POST",
-                                    url: `/urls/cadastrar`,
+                                    url: `/user/cadastrar`,
                                     data: formData,
                                     cache: false,
                                     processData: false,
@@ -288,17 +289,17 @@ $(function () {
                 form,
                 {
                     fields: {
-                        'link': {
+                        'name': {
                             validators: {
                                 notEmpty: {
-                                    message: 'O link é obrigatório'
+                                    message: 'O Nome é obrigatório'
                                 }
                             }
                         },
-                        'description': {
+                        'email': {
                             validators: {
                                 notEmpty: {
-                                    message: 'A descrição é obrigatória'
+                                    message: 'A E-mail é obrigatória'
                                 }
                             }
                         },
@@ -346,7 +347,7 @@ $(function () {
                                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                                     },
                                     type: "POST",
-                                    url: `/urls/${formData.get('id')}/editar`,
+                                    url: `/user/${formData.get('id')}/editar`,
                                     data: formData,
                                     cache: false,
                                     processData: false,
@@ -462,9 +463,9 @@ $(function () {
 
     $(document).on('click', `a.delete-url`,function (e) {
         let button = $(this);
-        console.log(button.data());
+        
         Swal.fire({
-            title: `Deseja remover o link <u>${button.data().link}</u> referente à <b>${button.data().description}</b>?`,
+            title: `Deseja mesmo remover <u>${button.data().name}</u>?`,
             icon: "warning",
             showCancelButton: true,
             buttonsStyling: false,
@@ -481,7 +482,7 @@ $(function () {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
                     type: "POST",
-                    url: `/urls/${button.data().id}/excluir`,
+                    url: `/user/${button.data().id}/excluir`,
                     data:{
                         "id":button.data().id
                     },
@@ -529,10 +530,10 @@ $(function () {
     $(document).on('show.bs.modal', '#kt_modal_edit_card', function (event) {
         let button = $(event.relatedTarget);
         let modal = $(this);
-        //console.log(button.data());
+     
 
         modal.find('input[name="id"]').val(button.data().id);
-        modal.find('input[name="link"]').val(button.data().link);
-        modal.find('textarea[name="description"]').val(button.data().description);
+        modal.find('input[name="name"]').val(button.data().name);
+        modal.find('input[name="email"]').val(button.data().email);
     });
 });
