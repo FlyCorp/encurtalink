@@ -89,12 +89,12 @@ class ShortUrlController extends Controller
     }
 
     public function getOrder(array $order)
-    {
+    {   
         $orderFilter =
             [
                 0 => ['column' => 'id',       'sort' => $order[0]['dir']],
-                1 => ['column' => 'code',     'sort' => $order[0]['dir']],
-                2 => ['column' => 'link',   'sort' => $order[0]['dir']],
+                1 => ['column' => 'link',     'sort' => $order[0]['dir']],
+                2 => ['column' => 'description',   'sort' => $order[0]['dir']],
             ];
 
         return (object) $orderFilter[$order[0]['column']];

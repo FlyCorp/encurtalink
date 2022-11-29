@@ -6,7 +6,7 @@ class SanitizerShortUrl
 {
 
     public function postCreate(array $data)
-    {
+    {   
         return [
             'code' => (string) \Illuminate\Support\Str::random(6),
             'link' => $data['link'],

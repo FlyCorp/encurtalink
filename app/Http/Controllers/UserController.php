@@ -104,8 +104,8 @@ class UserController extends Controller
         $orderFilter =
             [
                 0 => ['column' => 'id',       'sort' => $order[0]['dir']],
-                1 => ['column' => 'name',     'sort' => $order[0]['dir']],
-                2 => ['column' => 'email',   'sort' => $order[0]['dir']],
+                1 => ['column' => 'name',     'sort' => $order[1]['dir']],
+                2 => ['column' => 'email',   'sort' => $order[2]['dir']],
             ];
 
         return (object) $orderFilter[$order[0]['column']];

@@ -38,6 +38,7 @@ class ShortUrl extends Model
             {
                 $query->orWhere('short_urls.id', 'like', "%{$term}%");
                 $query->orWhere('short_urls.code', 'like', "%{$term}%");
+                $query->orWhere('short_urls.description', 'like', "%{$term}%");
                 $query->orWhere('short_urls.link', 'like', "%{$term}%");
             });
 
