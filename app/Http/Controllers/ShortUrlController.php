@@ -37,7 +37,7 @@ class ShortUrlController extends Controller
 
     public function postEdit(PostUpdateShortUrl $request)
     {
-        $this->shortUrl->find($request->id)->update($this->sanitizerShortUrl->postCreate($request->all()));
+        $this->shortUrl->find($request->id)->update($this->sanitizerShortUrl->postEdit($request->all()));
     }
 
     public function postDelete(PostDeleteShortUrl $request)
@@ -78,7 +78,8 @@ class ShortUrlController extends Controller
                 [
                     'id'            => $item->id,
                     'code'          => $item->code,
-                    'link'          => route('web.getUrl', $item->code),
+                    'link'          => $item->link,//
+                    'link_code'     => route('web.getUrl', $item->code),
                     'description'   => $item->description,
                 ];
         }
