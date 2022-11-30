@@ -36,7 +36,8 @@ class ShortUrlController extends Controller
     }
 
     public function postEdit(PostUpdateShortUrl $request)
-    {
+    {   
+        //dd($request->all());
         $this->shortUrl->find($request->id)->update($this->sanitizerShortUrl->postEdit($request->all()));
     }
 

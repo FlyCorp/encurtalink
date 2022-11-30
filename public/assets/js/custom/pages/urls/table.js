@@ -84,7 +84,7 @@ $(function () {
                                     </span>
                                 </a>
                                 <a title="Editar Endereço" href="tables.html#" data-bs-toggle="modal" data-bs-target="#kt_modal_edit_card" class="btn btn-icon btn-bg-light btn-active-color-warning btn-sm me-1"
-                                data-id="${data.id}" data-link="${data.link}" data-description="${data.description}">
+                                data-id="${data.id}" data-link="${data.link}" data-code="${data.code}" data-description="${data.description}">
                                     <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
                                     <span class="svg-icon svg-icon-3">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -579,6 +579,7 @@ $(function () {
         //console.log(button.data());
 
         modal.find('input[name="id"]').val(button.data().id);
+        modal.find('input[name="code"]').val(button.data().code);
         modal.find('input[name="link"]').val(button.data().link);
         modal.find('textarea[name="description"]').val(button.data().description);
     });
@@ -587,5 +588,16 @@ $(function () {
         let el = ($(this).parent().parent().find(".copy_input"));
         el.select();
         document.execCommand("copy", false);
+    });
+
+    $('input[name="code"]').keypress(function (e) {
+        var regex = new RegExp("^[a-zA-Z0-9._\b-]+$");
+        var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+        if (regex.test(str)) {
+            return true;
+        }
+    
+        e.preventDefault();
+        return false;
     });
 });
