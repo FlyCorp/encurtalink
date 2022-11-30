@@ -384,7 +384,7 @@ $(function () {
                             setTimeout(function() {
                                 // Remove loading indication
                                 submitButton.removeAttribute('data-kt-indicator');
-    
+       
                                 // Enable button
                                 submitButton.disabled = false;
                                 //console.log(formData.get('id')); return false;
