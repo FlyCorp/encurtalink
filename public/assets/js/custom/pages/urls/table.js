@@ -1,5 +1,6 @@
 "use strict";
 
+
 $(function () {
 
     /*
@@ -33,7 +34,39 @@ $(function () {
 
             {data: 'id'},
             {data: 'description'},
-            {data: 'link_code'},
+            {data:  function(data, type, row, meta){
+                /* return `
+                        <input type="text" class="copy_input" value="${data.link_code}">
+                        <a title="Copiar Link" type="button" value="${data.link_code}" class="button_copy_link_code btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-2">
+                            <span class="svg-icon svg-icon-3">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor"></path>
+                                    <path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor"></path>
+                                    <path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor"></path>
+                                </svg>
+                            </span>
+                        <!--end::Svg Icon-->
+                        </a>`; */
+                return `
+                        <!--begin::Input group-->
+                        <div class="input-group ">
+                            <input type="text" readonly style="border-color='none'" value="${data.link_code}" class="copy_input form-control form-control-sm"/>
+                            <span class="input-group-text" id="basic-addon2">
+                                <a title="Copiar Link" type="button" value="${data.link_code}" class="button_copy_link_code btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-2">
+                                    <span class="svg-icon svg-icon-3">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor"></path>
+                                            <path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor"></path>
+                                            <path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                <!--end::Svg Icon-->
+                                </a>
+                            </span>
+                        </div>
+                        <!--end::Input group-->
+                `;
+            }},
             {data: 'link'},
             {
                 data: function(data, type, row, meta){
@@ -548,5 +581,11 @@ $(function () {
         modal.find('input[name="id"]').val(button.data().id);
         modal.find('input[name="link"]').val(button.data().link);
         modal.find('textarea[name="description"]').val(button.data().description);
+    });
+
+    $(document).on('click','.button_copy_link_code', function(event){
+        let el = ($(this).parent().parent().find(".copy_input"));
+        el.select();
+        document.execCommand("copy", false);
     });
 });
