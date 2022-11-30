@@ -25,13 +25,15 @@ $(function () {
             {targets:  0, orderable: true,  width: '120px'},
             {targets:  1, orderable: true},
             {targets:  2, orderable: false},
-            {targets:  3, orderable: false, class:'text-center'},
+            {targets:  3, orderable: false},
+            {targets:  4, orderable: false},
         ],
         columns:
         [
 
             {data: 'id'},
             {data: 'description'},
+            {data: 'link_code'},
             {data: 'link'},
             {
                 data: function(data, type, row, meta){
@@ -76,7 +78,7 @@ $(function () {
             },
 
         ],
-        lengthMenu: [10, 25, 50, 100],
+        lengthMenu: [10, 25, 50, 50, 50],
         iDisplayLength: 25,
         language:
         {
