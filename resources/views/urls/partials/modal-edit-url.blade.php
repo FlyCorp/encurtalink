@@ -44,6 +44,7 @@
                         <div class="input-group mb-5">
                             <span class="input-group-text" name="code_link_base" id="basic-addon3">{{env('APP_URL')}}/</span>
                             <input type="text" class="form-control" name="code" id="basic-url" aria-describedby="basic-addon3">
+                            <input type="hidden" name="code_original">
                         </div>
                         <div class="fv-plugins-message-container invalid-feedback"></div>
                     </div>
