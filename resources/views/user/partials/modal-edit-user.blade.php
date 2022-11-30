@@ -174,8 +174,7 @@
                             class="btn btn-light me-3">Cancelar</button>
                         <button type="submit" id="kt_modal_new_update_submit" class="btn btn-primary">
                             <span class="indicator-label">Enviar</span>
-                            <span class="indicator-progress">Aguarde... <span
-                                    class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                            <span class="indicator-progress">Aguarde... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
                             </span>
                         </button>
                     </div>
