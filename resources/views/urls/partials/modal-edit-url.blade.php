@@ -25,43 +25,64 @@
             <!--begin::Modal body-->
             <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
                 <!--begin:Form-->
-                <form id="kt_modal_new_update_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" autocomplete="off">
+                <form id="kt_modal_new_update_form" class="form fv-plugins-bootstrap5 fv-plugins-framework"
+                    autocomplete="off">
                     <input type="hidden" name="id">
                     <div class="mb-13 text-center">
                         <!--begin::Title-->
-                        <h1 class="mb-3">Novo link</h1>
+                        <h1 class="mb-3">Editar link</h1>
                         <!--end::Title-->
                     </div>
-                    <!--begin::Input group-->
-                    <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
-                    <!--begin::Label-->
-                    <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
-                        <span class="required">Link</span>
-                    </label>
-                    <!--end::Label-->
-                    <input type="text" class="form-control form-control-solid" placeholder="" name="link">
-                    <div class="fv-plugins-message-container invalid-feedback"></div>
+                     <!--begin::Input group-->
+                     <div
+                        class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                            <span class="required">Link</span>
+                        </label>
+                        <!--end::Label-->
+                        <div class="input-group mb-5">
+                            <span class="input-group-text" name="code_link_base" id="basic-addon3">{{env('APP_URL')}}/</span>
+                            <input type="text" class="form-control" name="code" id="basic-url" aria-describedby="basic-addon3">
+                        </div>
+                        <div class="fv-plugins-message-container invalid-feedback"></div>
                     </div>
                     <!--end::Input group-->
                     <!--begin::Input group-->
-                    <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
-                    <!--begin::Label-->
-                    <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
-                        <span class="required">Descrição</span>
-                    </label>
-                    <!--end::Label-->
-                    <textarea class="form-control form-control-solid" rows="3" name="description" placeholder="Informe uma breve descrição"></textarea>
-                    <div class="fv-plugins-message-container invalid-feedback"></div>
+                    <div
+                        class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                            <span class="required">Destino</span>
+                        </label>
+                        <!--end::Label-->
+                        <input type="text" class="form-control form-control-solid" placeholder="" name="link">
+                        <div class="fv-plugins-message-container invalid-feedback"></div>
+                    </div>
+                    <!--end::Input group-->
+                    <!--begin::Input group-->
+                    <div
+                        class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                            <span class="required">Descrição</span>
+                        </label>
+                        <!--end::Label-->
+                        <textarea class="form-control form-control-solid" rows="3" name="description"
+                            placeholder="Informe uma breve descrição"></textarea>
+                        <div class="fv-plugins-message-container invalid-feedback"></div>
                     </div>
                     <!--end::Input group-->
                     <!--begin::Actions-->
                     <div class="text-center pt-15">
-                    <button type="reset" id="kt_modal_new_update_cancel" class="btn btn-light me-3">Cancelar</button>
-                    <button type="submit" id="kt_modal_new_update_submit" class="btn btn-primary">
-                        <span class="indicator-label">Enviar</span>
-                        <span class="indicator-progress">Aguarde... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-                        </span>
-                    </button>
+                        <button type="reset" id="kt_modal_new_update_cancel"
+                            class="btn btn-light me-3">Cancelar</button>
+                        <button type="submit" id="kt_modal_new_update_submit" class="btn btn-primary">
+                            <span class="indicator-label">Enviar</span>
+                            <span class="indicator-progress">Aguarde... <span
+                                    class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                            </span>
+                        </button>
                     </div>
                     <!--end::Actions-->
                 </form>

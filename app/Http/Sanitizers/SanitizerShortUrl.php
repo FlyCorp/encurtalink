@@ -17,6 +17,7 @@ class SanitizerShortUrl
     public function postEdit(array $data)
     {
         return [
+            'code' => $data['code'],
             'link' => $data['link'],
             'description' => $data['description'],
         ];
