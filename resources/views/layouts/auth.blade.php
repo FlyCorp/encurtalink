@@ -83,7 +83,8 @@
                         <!--begin::Text-->
                         <div class="text-gray-600 fs-base text-center fw-semibold">
 							Este é o encutador oficial de link da <b>{{env('APP_NAME')}}</b>, simples, facil e acessivel a todos os membros, 
-							<br> seja bem vindo
+							<br>
+                            <b>seja bem vindo</b>
                             {{-- <a href="sign-in.html#" class="opacity-75-hover text-primary me-1">the blogger</a>introduces
                             a person they’ve interviewed
                             <br />and provides some background information about
