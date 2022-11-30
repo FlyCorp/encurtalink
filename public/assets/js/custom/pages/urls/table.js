@@ -366,7 +366,7 @@ $(function () {
             submitButton.addEventListener('click', function (e) {
                 // Prevent default button action
                 e.preventDefault();
-    
+      
                 var formData = new FormData(document.querySelector('#kt_modal_new_update_form'));
                 
                 // Validate form before submit
