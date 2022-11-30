@@ -83,7 +83,7 @@
                         <!--end::Title-->
                         <!--begin::Text-->
                         <div class="text-gray-600 fs-base text-center fw-semibold">
-							Este é o encutador oficial de link da <b>Central Farma</b>, simples, facil e acessivel a todos os membros, 
+							Este é o encutador oficial de link da <b>{{env('APP_NAME')}}</b>, simples, facil e acessivel a todos os membros, 
 							<br> seja bem vindo
                             {{-- <a href="sign-in.html#" class="opacity-75-hover text-primary me-1">the blogger</a>introduces
                             a person they’ve interviewed
