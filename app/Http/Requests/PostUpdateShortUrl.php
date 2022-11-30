@@ -14,11 +14,11 @@ class PostUpdateShortUrl extends FormRequest
 
     public function rules()
     {   
-       // dd($this->all());
+        //dd($this->all());
         return
             [
                 'id'          => 'required|exists:short_urls,id',
-                'code'        => 'required|unique:short_urls,code',
+                'code'        => ($this->code_original!=$this->code)?'required|unique:short_urls,code,NULL':"",
                 'link'        => 'required|url',
                 'description' => 'required',
             ];

@@ -580,8 +580,10 @@ $(function () {
 
         modal.find('input[name="id"]').val(button.data().id);
         modal.find('input[name="code"]').val(button.data().code);
+        modal.find('input[name="code_original"]').val(button.data().code);
         modal.find('input[name="link"]').val(button.data().link);
         modal.find('textarea[name="description"]').val(button.data().description);
+        
     });
 
     $(document).on('click','.button_copy_link_code', function(event){
