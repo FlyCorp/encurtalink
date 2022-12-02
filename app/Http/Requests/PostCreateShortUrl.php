@@ -13,10 +13,11 @@ class PostCreateShortUrl extends FormRequest
     }
 
     public function rules()
-    {
+    {   
+        /* |unique:short_urls,link,NULL,id,deleted_at,NULL */
         return
             [
-                'link'        => 'required|url|unique:short_urls,link,NULL,id,deleted_at,NULL',
+                'link'        => 'required|url',
                 'description' => 'required',
             ];
     }
