@@ -88,7 +88,8 @@ class ShortUrlController extends Controller
                 [
                     'id'            => $item->id,
                     'code'          => $item->code,
-                    'link'          => Str::limit($item->link, 40, '...'),//
+                    'link'          => Str::limit($item->link, 40, '...'),
+                    'link_full'     => $item->link,
                     'link_code'     => route('web.getUrl', $item->code),
                     'description'   => $item->description,
                     'script_header' => $item->script_header,

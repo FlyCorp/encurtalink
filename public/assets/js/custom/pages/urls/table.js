@@ -93,7 +93,7 @@ $(function () {
                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-250px py-4" data-kt-menu="true" style="">
                         <!--begin::Menu item-->
                         <div class="menu-item px-3">
-                            <a href="${data.link}" target="_blank" class="menu-link px-3">
+                            <a href="${data.link_full}" target="_blank" class="menu-link px-3">
                             <!--begin::Svg Icon | path: icons/duotune/abstract/abs030.svg-->
                             <span class="svg-icon svg-icon-3 me-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
