@@ -71,6 +71,9 @@ $(function () {
             {
                 url: "/assets/plugins/custom/datatables/pt-BR.json",
             },
+            drawCallback: function () {
+                KTMenu.createInstances();
+            }
         });
 
     /*
