@@ -24,9 +24,6 @@
                         <!--begin::Body-->
                         <div class="card-body py-3">
                             <!--begin:Form-->
-                            @if($errors->any())
-                                {{ implode('', $errors->all('<div>:message</div>')) }}
-                            @endif
                             <form method='post' action='{{ url()->current() }}' autocomplete="off">
                                 @csrf
                                 <!--begin::Input group-->
