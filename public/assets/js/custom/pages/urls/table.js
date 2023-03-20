@@ -23,17 +23,23 @@ $(function () {
         },
         columnDefs:
         [
-            {targets:  0, orderable: true,  width: '120px'},
+            {targets:  0, orderable: true,  width: '5%'},
             {targets:  1, orderable: true},
             {targets:  2, orderable: false},
-            {targets:  3, orderable: false},
-            {targets:  4, orderable: false, class: 'text-end'},
+            /*{targets:  3, orderable: false},*/
+            {targets:  3, orderable: false, class: 'text-end'},
         ],
         columns:
         [
 
             {data: 'id'},
-            {data: 'description'},
+            {data: function(data, type, row, meta){
+                return `<div class="d-flex flex-column">
+                <a href="overview.html#" class="text-gray-900 text-hover-primary fs-6 fw-bold">${data.description}</a>
+                <span class="text-gray-400 fw-bold">${data.link}</span>
+              </div>`;
+                }
+            },
             {data:  function(data, type, row, meta){
                 /* return `
                         <input type="text" class="copy_input" value="${data.link_code}">
@@ -69,7 +75,7 @@ $(function () {
                         <!--end::Input group-->
                 `;
             }},
-            {data: 'link'},
+            /*{data: 'link'},*/
             {
                 data: function(data, type, row, meta){
                     return `<span>
