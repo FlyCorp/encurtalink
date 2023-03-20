@@ -81,7 +81,7 @@
                                         <span class="required">Script header</span>
                                     </label>
                                     <!--end::Label-->
-                                    <textarea class="form-control form-control-solid" rows="3" name="script_header">{{old('script_header',$shortUrl->script_header)}}</textarea>
+                                    <textarea class="form-control form-control-solid" rows="6" name="script_header">{{old('script_header',$shortUrl->script_header)}}</textarea>
                                     <div class="fv-plugins-message-container invalid-feedback"></div>
                                 </div>
                                 <!--end::Input group-->
@@ -93,7 +93,7 @@
                                         <span class="required">Script body</span>
                                     </label>
                                     <!--end::Label-->
-                                    <textarea class="form-control form-control-solid" rows="3" name="script_body">{{old('script_body',$shortUrl->script_body)}}</textarea>
+                                    <textarea class="form-control form-control-solid" rows="6" name="script_body">{{old('script_body',$shortUrl->script_body)}}</textarea>
                                     <div class="fv-plugins-message-container invalid-feedback"></div>
                                 </div>
                                 <!--end::Input group-->
