@@ -109,8 +109,7 @@ $(function () {
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-3">
-                            <a href="urls/${data.id}/editar" class="menu-link px-3"
-                            data-id="${data.id}" data-link="${data.link}" data-code="${data.code}" data-description="${data.description}" data-script_header="<!--${data.script_header}-->" data-script_body="<!--${data.script_body}-->">
+                            <a href="urls/${data.id}/editar" class="menu-link px-3">
                             <!--begin::Svg Icon | path: icons/duotune/coding/cod001.svg-->
                             <span class="svg-icon svg-icon-3 me-3">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

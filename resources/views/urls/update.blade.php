@@ -1,7 +1,5 @@
 @extends('layouts.admin')
 
-
-
 @push('script')
 @endpush
 
