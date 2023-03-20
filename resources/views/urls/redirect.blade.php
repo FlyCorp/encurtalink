@@ -114,7 +114,7 @@
             let url = $(`input[type="hidden"][name="link"]`).val();
             setTimeout(() => {
                 window.location = url;
-            }, 4000);
+            }, 3000);
         });
     </script>
     <!--end::Javascript-->
