@@ -74,6 +74,30 @@
                         <div class="fv-plugins-message-container invalid-feedback"></div>
                     </div>
                     <!--end::Input group-->
+                    <!--begin::Input group-->
+                    <div
+                        class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                            <span class="required">Script header</span>
+                        </label>
+                        <!--end::Label-->
+                        <textarea class="form-control form-control-solid" rows="3" name="script_header"></textarea>
+                        <div class="fv-plugins-message-container invalid-feedback"></div>
+                    </div>
+                    <!--end::Input group-->
+                    <!--begin::Input group-->
+                    <div
+                        class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                            <span class="required">Script body</span>
+                        </label>
+                        <!--end::Label-->
+                        <textarea class="form-control form-control-solid" rows="3" name="script_body"></textarea>
+                        <div class="fv-plugins-message-container invalid-feedback"></div>
+                    </div>
+                    <!--end::Input group-->
                     <!--begin::Actions-->
                     <div class="text-center pt-15">
                         <button type="reset" id="kt_modal_new_update_cancel"

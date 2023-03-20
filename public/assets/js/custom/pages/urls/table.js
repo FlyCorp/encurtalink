@@ -5,7 +5,7 @@ $(function () {
 
     /*
     |--------------------------------------------------------------------------
-    | DataTable 
+    | DataTable
     |--------------------------------------------------------------------------
     */
     let table = $('.datatable-urls')
@@ -54,10 +54,12 @@ $(function () {
                             <span class="input-group-text" id="basic-addon2">
                                 <a title="Copiar Link" type="button" value="${data.link_code}" class="button_copy_link_code btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-2">
                                     <span class="svg-icon svg-icon-3">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor"></path>
-                                            <path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor"></path>
-                                            <path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor"></path>
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <rect x="0" y="0" width="24" height="24"/>
+                                                <path d="M10.9,2 C11.4522847,2 11.9,2.44771525 11.9,3 C11.9,3.55228475 11.4522847,4 10.9,4 L6,4 C4.8954305,4 4,4.8954305 4,6 L4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,16 C20,15.4477153 20.4477153,15 21,15 C21.5522847,15 22,15.4477153 22,16 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 L2,6 C2,3.790861 3.790861,2 6,2 L10.9,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                                                <path d="M24.0690576,13.8973499 C24.0690576,13.1346331 24.2324969,10.1246259 21.8580869,7.73659596 C20.2600137,6.12944276 17.8683518,5.85068794 15.0081639,5.72356847 L15.0081639,1.83791555 C15.0081639,1.42370199 14.6723775,1.08791555 14.2581639,1.08791555 C14.0718537,1.08791555 13.892213,1.15726043 13.7542266,1.28244533 L7.24606818,7.18681951 C6.93929045,7.46513642 6.9162184,7.93944934 7.1945353,8.24622707 C7.20914339,8.26232899 7.22444472,8.27778811 7.24039592,8.29256062 L13.7485543,14.3198102 C14.0524605,14.6012598 14.5269852,14.5830551 14.8084348,14.2791489 C14.9368329,14.140506 15.0081639,13.9585047 15.0081639,13.7695393 L15.0081639,9.90761477 C16.8241562,9.95755456 18.1177196,10.0730665 19.2929978,10.4469645 C20.9778605,10.9829796 22.2816185,12.4994368 23.2042718,14.996336 L23.2043032,14.9963244 C23.313119,15.2908036 23.5938372,15.4863432 23.9077781,15.4863432 L24.0735976,15.4863432 C24.0735976,15.0278051 24.0690576,14.3014082 24.0690576,13.8973499 Z" fill="#000000" fill-rule="nonzero" transform="translate(15.536799, 8.287129) scale(-1, 1) translate(-15.536799, -8.287129) "/>
+                                            </g>
                                         </svg>
                                     </span>
                                 <!--end::Svg Icon-->
@@ -84,7 +86,7 @@ $(function () {
                                     </span>
                                 </a>
                                 <a title="Editar Endereço" href="tables.html#" data-bs-toggle="modal" data-bs-target="#kt_modal_edit_card" class="btn btn-icon btn-bg-light btn-active-color-warning btn-sm me-1"
-                                data-id="${data.id}" data-link="${data.link}" data-code="${data.code}" data-description="${data.description}">
+                                data-id="${data.id}" data-link="${data.link}" data-code="${data.code}" data-description="${data.description}" data-script_header="${data.script_header}" data-script_body="${data.script_body}">
                                     <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
                                     <span class="svg-icon svg-icon-3">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -131,15 +133,15 @@ $(function () {
         var form;
         var modal;
         var modalEl;
-        
+
         // Init form inputs
         var initForm = function() {
         }
-    
+
         // Handle form validation and submittion
         var handleForm = function() {
             // Stepper custom navigation
-    
+
             // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
             validator = FormValidation.formValidation(
                 form,
@@ -160,7 +162,7 @@ $(function () {
                             }
                         },
                     },
-                    
+
                     plugins: {
                         trigger: new FormValidation.plugins.Trigger(),
                         bootstrap: new FormValidation.plugins.Bootstrap5({
@@ -171,33 +173,33 @@ $(function () {
                     }
                 }
             );
-    
+
             // Action buttons
             submitButton.addEventListener('click', function (e) {
                 // Prevent default button action
                 e.preventDefault();
-    
+
                 var formData = new FormData(document.querySelector('#kt_modal_new_card_form'));
-    
+
                 // Validate form before submit
                 if (validator) {
                     validator.validate().then(function (status) {
-    
+
                         if (status == 'Valid') {
                             // Show loading indication
                             submitButton.setAttribute('data-kt-indicator', 'on');
-    
-                            // Disable button to avoid multiple click 
+
+                            // Disable button to avoid multiple click
                             submitButton.disabled = true;
-    
+
                             // Simulate form submission. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                             setTimeout(function() {
                                 // Remove loading indication
                                 submitButton.removeAttribute('data-kt-indicator');
-    
+
                                 // Enable button
                                 submitButton.disabled = false;
-    
+
                                 $.ajax({
                                     headers: {
                                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -209,7 +211,7 @@ $(function () {
                                     processData: false,
                                     contentType: false,
                                     success: function (response) {
-                                        
+
                                         //User feedback
                                         Swal.fire({
                                             text: "O link foi inserido com sucesso!",
@@ -220,7 +222,7 @@ $(function () {
                                                 confirmButton: "btn btn-primary"
                                             }
                                         });
-                                        
+
                                         //reload table
                                         table.draw();
                                         //hide modal
@@ -229,11 +231,11 @@ $(function () {
                                     error: function (response, status, message) {
                                         switch (true) {
                                             case (response.status==422):
-                                                    $.each(response.responseJSON.errors, function (index, element) { 
+                                                    $.each(response.responseJSON.errors, function (index, element) {
                                                         toastr.warning(element[0]);
                                                     });
                                                 break;
-                                        
+
                                             default:
                                                     toastr.error("Opss...ocorreu um erro. Contacte o suporte!");
                                                 break;
@@ -241,8 +243,8 @@ $(function () {
                                     },
                                     timeout: 5000
                                 });
-    
-                            }, 2000);   						
+
+                            }, 2000);
                         } else {
 
                             Swal.fire({
@@ -258,10 +260,10 @@ $(function () {
                     });
                 }
             });
-    
+
             cancelButton.addEventListener('click', function (e) {
                 e.preventDefault();
-    
+
                 Swal.fire({
                     text: "Tem certeza que deseja cancelar?",
                     icon: "warning",
@@ -275,31 +277,31 @@ $(function () {
                     }
                 }).then(function (result) {
                     if (result.value) {
-                        form.reset(); // Reset form	
-                        modal.hide(); // Hide modal				
+                        form.reset(); // Reset form
+                        modal.hide(); // Hide modal
                     } else if (result.dismiss === 'cancel') {
                         //none
                     }
                 });
             });
         }
-    
+
         return {
             // Public functions
             init: function () {
                 // Elements
                 modalEl = document.querySelector('#kt_modal_new_card');
-    
+
                 if (!modalEl) {
                     return;
                 }
-    
+
                 modal = new bootstrap.Modal(modalEl);
-    
+
                 form = document.querySelector('#kt_modal_new_card_form');
                 submitButton = document.getElementById('kt_modal_new_card_submit');
                 cancelButton = document.getElementById('kt_modal_new_card_cancel');
-    
+
                 initForm();
                 handleForm();
             }
@@ -307,7 +309,7 @@ $(function () {
     }();
 
     KTModalNewCard.init();
-    
+
     /*
     |--------------------------------------------------------------------------
     | Modal edit link
@@ -320,16 +322,16 @@ $(function () {
         var form;
         var modal;
         var modalEl;
-        
+
         // Init form inputs
         var initForm = function() {
-            
+
         }
-    
+
         // Handle form validation and submittion
         var handleForm = function() {
             // Stepper custom navigation
-    
+
             // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
             validator = FormValidation.formValidation(
                 form,
@@ -350,7 +352,7 @@ $(function () {
                             }
                         },
                     },
-                    
+
                     plugins: {
                         trigger: new FormValidation.plugins.Trigger(),
                         bootstrap: new FormValidation.plugins.Bootstrap5({
@@ -361,30 +363,30 @@ $(function () {
                     }
                 }
             );
-    
+
             // Action buttons
             submitButton.addEventListener('click', function (e) {
                 // Prevent default button action
                 e.preventDefault();
-      
+
                 var formData = new FormData(document.querySelector('#kt_modal_new_update_form'));
-                
+
                 // Validate form before submit
                 if (validator) {
                     validator.validate().then(function (status) {
-    
+
                         if (status == 'Valid') {
                             // Show loading indication
                             submitButton.setAttribute('data-kt-indicator', 'on');
-    
-                            // Disable button to avoid multiple click 
+
+                            // Disable button to avoid multiple click
                             submitButton.disabled = true;
-     
+
                             // Simulate form submission. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                             setTimeout(function() {
                                 // Remove loading indication
                                 submitButton.removeAttribute('data-kt-indicator');
-       
+
                                 // Enable button
                                 submitButton.disabled = false;
                                 //console.log(formData.get('id')); return false;
@@ -399,7 +401,7 @@ $(function () {
                                     processData: false,
                                     contentType: false,
                                     success: function (response) {
-                                        
+
                                         //User feedback
                                         Swal.fire({
                                             text: "O link foi editados com sucesso!",
@@ -410,7 +412,7 @@ $(function () {
                                                 confirmButton: "btn btn-primary"
                                             }
                                         });
-                                        
+
                                         //reload table
                                         table.draw();
                                         //hide modal
@@ -419,11 +421,11 @@ $(function () {
                                     error: function (response, status, message) {
                                         switch (true) {
                                             case (response.status==422):
-                                                    $.each(response.responseJSON.errors, function (index, element) { 
+                                                    $.each(response.responseJSON.errors, function (index, element) {
                                                         toastr.warning(element[0]);
                                                     });
                                                 break;
-                                        
+
                                             default:
                                                     toastr.error("Opss...ocorreu um erro. Contacte o suporte!");
                                                 break;
@@ -431,8 +433,8 @@ $(function () {
                                     },
                                     timeout: 5000
                                 });
-    
-                            }, 2000);   						
+
+                            }, 2000);
                         } else {
 
                             Swal.fire({
@@ -448,10 +450,10 @@ $(function () {
                     });
                 }
             });
-    
+
             cancelButton.addEventListener('click', function (e) {
                 e.preventDefault();
-    
+
                 Swal.fire({
                     text: "Tem certeza que deseja cancelar?",
                     icon: "warning",
@@ -465,31 +467,31 @@ $(function () {
                     }
                 }).then(function (result) {
                     if (result.value) {
-                        form.reset(); // Reset form	
-                        modal.hide(); // Hide modal				
+                        form.reset(); // Reset form
+                        modal.hide(); // Hide modal
                     } else if (result.dismiss === 'cancel') {
                         //none
                     }
                 });
             });
         }
-    
+
         return {
             // Public functions
             init: function () {
                 // Elements
                 modalEl = document.querySelector('#kt_modal_edit_card');
-    
+
                 if (!modalEl) {
                     return;
                 }
-    
+
                 modal = new bootstrap.Modal(modalEl);
-    
+
                 form = document.querySelector('#kt_modal_new_update_form');
                 submitButton = document.getElementById('kt_modal_new_update_submit');
                 cancelButton = document.getElementById('kt_modal_new_update_cancel');
-    
+
                 initForm();
                 handleForm();
             }
@@ -533,7 +535,7 @@ $(function () {
                         "id":button.data().id
                     },
                     success: function (response) {
-                        
+
                         //User feedback
                         Swal.fire({
                             text: "O link foi excluído com sucesso!",
@@ -544,18 +546,18 @@ $(function () {
                                 confirmButton: "btn btn-primary"
                             }
                         });
-                        
+
                         //reload table
                         table.draw();
                     },
                     error: function (response, status, message) {
                         switch (true) {
                             case (response.status==422):
-                                    $.each(response.responseJSON.errors, function (index, element) { 
+                                    $.each(response.responseJSON.errors, function (index, element) {
                                         toastr.warning(element[0]);
                                     });
                                 break;
-                        
+
                             default:
                                     toastr.error("Opss...ocorreu um erro. Contacte o suporte!");
                                 break;
@@ -583,7 +585,9 @@ $(function () {
         modal.find('input[name="code_original"]').val(button.data().code);
         modal.find('input[name="link"]').val(button.data().link);
         modal.find('textarea[name="description"]').val(button.data().description);
-        
+        modal.find('textarea[name="script_header"]').val(button.data().script_header);
+        modal.find('textarea[name="script_body"]').val(button.data().script_body);
+
     });
 
     $(document).on('click','.button_copy_link_code', function(event){
@@ -598,8 +602,9 @@ $(function () {
         if (regex.test(str)) {
             return true;
         }
-    
+
         e.preventDefault();
         return false;
     });
+
 });

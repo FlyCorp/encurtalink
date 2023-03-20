@@ -16622,7 +16622,7 @@ readers do not read off random characters that represent icons */
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("fonts/bootstrap-icons/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf") format("woff2"), url("fonts/bootstrap-icons/bootstrap-icons.woff?8d200481aa7f02a2d63a331fc782cfaf") format("woff");
+  src: url("fonts/bootstrap-icons/bootstrap-icons.woff2") format("woff2"), url("fonts/bootstrap-icons/bootstrap-icons.woff") format("woff");
 }
 .bi::before,
 [class^=bi-]::before,

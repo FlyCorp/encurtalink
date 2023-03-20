@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use App\Presenters\UserPresenter;
 
 class User extends Authenticatable
-{   
+{
     use SoftDeletes;
     use Notifiable;
     use UserPresenter;
@@ -50,9 +50,9 @@ class User extends Authenticatable
 
             $query->where(function($query) use($term)
             {
-                $query->orWhere('short_urls.id', 'like', "%{$term}%");
-                $query->orWhere('short_urls.name', 'like', "%{$term}%");
-                $query->orWhere('short_urls.email', 'like', "%{$term}%");
+                $query->orWhere('users.id', 'like', "%{$term}%");
+                $query->orWhere('users.name', 'like', "%{$term}%");
+                $query->orWhere('users.email', 'like', "%{$term}%");
             });
 
         }
