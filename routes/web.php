@@ -13,6 +13,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'auth', 'prefix' => 'urls', 'as' => 'urls.'], function () {
     Route::get('', 'ShortUrlController@index')->name('index');
     Route::post('cadastrar', 'ShortUrlController@postCreate')->name('postCreate');
+    Route::get('{id}/editar', 'ShortUrlController@getEdit')->name('getEdit');
     Route::post('{id}/editar', 'ShortUrlController@postEdit')->name('postEdit');
     Route::post('{id}/excluir', 'ShortUrlController@postDelete')->name('postDelete');
     Route::get('buscar/{term?}', 'ShortUrlController@getSearch')->name('getSearch');

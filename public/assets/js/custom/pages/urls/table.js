@@ -109,7 +109,7 @@ $(function () {
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-3">
-                            <a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_edit_card"
+                            <a href="urls/${data.id}/editar" class="menu-link px-3"
                             data-id="${data.id}" data-link="${data.link}" data-code="${data.code}" data-description="${data.description}" data-script_header="<!--${data.script_header}-->" data-script_body="<!--${data.script_body}-->">
                             <!--begin::Svg Icon | path: icons/duotune/coding/cod001.svg-->
                             <span class="svg-icon svg-icon-3 me-3">
@@ -618,7 +618,7 @@ $(function () {
         return  script.replace("<!--",'').replace("-->",'');
     }
 
-    $(document).on('show.bs.modal', '#kt_modal_edit_card', function (event) {
+    /*$(document).on('show.bs.modal', '#kt_modal_edit_card', function (event) {
         let button = $(event.relatedTarget);
         let modal = $(this);
         //console.log(button.data());
@@ -631,7 +631,7 @@ $(function () {
         modal.find('textarea[name="script_header"]').val(sanitizeScript(String(button.data().script_header)));
         modal.find('textarea[name="script_body"]').val(sanitizeScript(String(button.data().script_body)));
 
-    });
+    });*/
 
     $(document).on('click','.button_copy_link_code', function(event){
         let el = ($(this).parent().parent().find(".copy_input"));

@@ -38,9 +38,16 @@ class ShortUrlController extends Controller
         return view('urls.redirect', compact('link'));
     }
 
-    public function postEdit(PostUpdateShortUrl $request)
-    {
-        $this->shortUrl->find($request->id)->update($this->sanitizerShortUrl->postEdit($request->all()));
+    public function getEdit($id)
+    {   
+        $shortUrl = $this->shortUrl->findOrFail($id);
+        return view('urls.update',compact('shortUrl'));
+    }
+
+    public function postEdit($id,PostUpdateShortUrl $request)
+    {   
+        $this->shortUrl->find($id)->update($this->sanitizerShortUrl->postEdit($request->all()));
+        return redirect()->route('urls.index');
     }
 
     public function postDelete(PostDeleteShortUrl $request)
