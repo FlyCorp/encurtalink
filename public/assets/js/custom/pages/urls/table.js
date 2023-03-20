@@ -110,7 +110,7 @@ $(function () {
                         <!--begin::Menu item-->
                         <div class="menu-item px-3">
                             <a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_edit_card"
-                            data-id="${data.id}" data-link="${data.link}" data-code="${data.code}" data-description="${data.description}" data-script_header="${data.script_header}" data-script_body="${data.script_body}">
+                            data-id="${data.id}" data-link="${data.link}" data-code="${data.code}" data-description="${data.description}" data-script_header="<!--${data.script_header}-->" data-script_body="<!--${data.script_body}-->">
                             <!--begin::Svg Icon | path: icons/duotune/coding/cod001.svg-->
                             <span class="svg-icon svg-icon-3 me-3">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -609,6 +609,15 @@ $(function () {
         document.querySelector('#kt_modal_new_card_form').reset();
     });
 
+    function sanitizeScript(script){
+        
+        if(script == '<!--null-->'){
+            return '';
+        }
+
+        return  script.replace("<!--",'').replace("-->",'');
+    }
+
     $(document).on('show.bs.modal', '#kt_modal_edit_card', function (event) {
         let button = $(event.relatedTarget);
         let modal = $(this);
@@ -619,8 +628,8 @@ $(function () {
         modal.find('input[name="code_original"]').val(button.data().code);
         modal.find('input[name="link"]').val(button.data().link);
         modal.find('textarea[name="description"]').val(button.data().description);
-        modal.find('textarea[name="script_header"]').val(button.data().script_header);
-        modal.find('textarea[name="script_body"]').val(button.data().script_body);
+        modal.find('textarea[name="script_header"]').val(sanitizeScript(String(button.data().script_header)));
+        modal.find('textarea[name="script_body"]').val(sanitizeScript(String(button.data().script_body)));
 
     });
 
