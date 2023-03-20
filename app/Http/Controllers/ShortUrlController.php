@@ -9,6 +9,8 @@ use App\Http\Requests\PostDeleteShortUrl;
 use App\Http\Requests\PostUpdateShortUrl;
 use App\Http\Sanitizers\SanitizerShortUrl;
 
+use \Illuminate\Support\Str;
+
 class ShortUrlController extends Controller
 {
     protected $shortUrl;
@@ -79,7 +81,7 @@ class ShortUrlController extends Controller
                 [
                     'id'            => $item->id,
                     'code'          => $item->code,
-                    'link'          => $item->link,//
+                    'link'          => Str::limit($item->link, 40, '...'),//
                     'link_code'     => route('web.getUrl', $item->code),
                     'description'   => $item->description,
                     'script_header' => $item->script_header,
