@@ -26,7 +26,7 @@ class UserController extends Controller
     }
 
     public function postCreate(PostCreateUser $request)
-    {      
+    {
         $this->userMain->create($this->sanitizerUser->postCreate($request->all()));
     }
 
@@ -36,7 +36,7 @@ class UserController extends Controller
     }
 
     public function postEdit(PostUpdateUser $request)
-    {      
+    {
         $objects=[
             'name'=>$request->name,
             'email'=>$request->email,
@@ -54,8 +54,8 @@ class UserController extends Controller
     }
 
     public function getSearch(Request $request)
-    {   
-        
+    {
+
         $query = request()->all();
 
         $queryTerm      = $query['term'];
@@ -82,20 +82,20 @@ class UserController extends Controller
                 'recordsFiltered' => $collectionTotal,
             ];
         foreach ($collection as $item) {
-            
+
             $collectionData[] =
                 [
                     'id'            => $item->id,
                     'name'          => $item->name,
                     'email'         => $item->email,
-                    'avatar'        => "data:image/png;base64, ".base64_encode($item->avatar) 
+                    'avatar'        => $item->avatar ? sprintf( "data:image/png;base64,%s", base64_encode($item->avatar)) : null
                 ];
-               
+
         }
 
         $collectionFilter['data'] = $collectionData;
 
-        
+
         return response()->json($collectionFilter);
     }
 
@@ -104,8 +104,8 @@ class UserController extends Controller
         $orderFilter =
             [
                 0 => ['column' => 'id',       'sort' => $order[0]['dir']],
-                1 => ['column' => 'name',     'sort' => $order[1]['dir']],
-                2 => ['column' => 'email',   'sort' => $order[2]['dir']],
+                1 => ['column' => 'name',     'sort' => $order[0]['dir']],
+                2 => ['column' => 'email',   'sort' => $order[0]['dir']],
             ];
 
         return (object) $orderFilter[$order[0]['column']];

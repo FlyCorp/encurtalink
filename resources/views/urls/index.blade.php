@@ -6,6 +6,9 @@
 @push('script')
     <link href="@version('assets/plugins/custom/datatables/datatables.bundle.css')" rel="stylesheet" type="text/css" />
     <script src="@version('assets/plugins/custom/datatables/datatables.bundle.js')"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.css">
     <script src="@version('assets/js/custom/pages/urls/table.js')" rel="script" type="text/javascript"></script>
 @endpush
 

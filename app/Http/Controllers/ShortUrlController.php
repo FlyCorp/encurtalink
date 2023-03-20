@@ -26,18 +26,18 @@ class ShortUrlController extends Controller
     }
 
     public function postCreate(PostCreateShortUrl $request)
-    {   
+    {
         $this->shortUrl->create($this->sanitizerShortUrl->postCreate($request->all()));
     }
 
     public function getUrl($code)
-    {   
-        return redirect($this->shortUrl->where('code', $code)->first()->link);
+    {
+        $link = $this->shortUrl->where('code', $code)->first();
+        return view('urls.redirect', compact('link'));
     }
 
     public function postEdit(PostUpdateShortUrl $request)
-    {   
-        //dd($request->all(),'aaaaaaa');
+    {
         $this->shortUrl->find($request->id)->update($this->sanitizerShortUrl->postEdit($request->all()));
     }
 
@@ -82,6 +82,8 @@ class ShortUrlController extends Controller
                     'link'          => $item->link,//
                     'link_code'     => route('web.getUrl', $item->code),
                     'description'   => $item->description,
+                    'script_header' => $item->script_header,
+                    'script_body'   => $item->script_body,
                 ];
         }
 
@@ -91,7 +93,7 @@ class ShortUrlController extends Controller
     }
 
     public function getOrder(array $order)
-    {   
+    {
         $orderFilter =
             [
                 0 => ['column' => 'id',       'sort' => $order[0]['dir']],
