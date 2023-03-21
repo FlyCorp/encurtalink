@@ -21,9 +21,9 @@ class SanitizerUser
         $name = $this->trimAll($data['name']);
         
         return [
-            'name' => mb_convert_case($name, MB_CASE_TITLE, 'UTF-8'),
-            'email' => $data['email'],
-            'avatar' =>$data['avatar_name']
+            'name'      => mb_convert_case($name, MB_CASE_TITLE, 'UTF-8'),
+            'email'     => $data['email'],
+            'avatar'    => (!empty($data['avatar_name']))?$data['avatar_name']:null,
         ];
     }
 

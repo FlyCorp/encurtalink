@@ -36,20 +36,42 @@ class UserController extends Controller
     }
 
     public function postEdit(PostUpdateUser $request)
-    {
-        $objects=[
-            'name'=>$request->name,
-            'email'=>$request->email,
-        ];
+    {   
+        try {
+            //code...  
+            $objects=[
+                'name'=>$request->name,
+                'email'=>$request->email,
+            ];
 
-        $image =  base64_encode(file_get_contents($request->file('avatar')));
-        $objects['avatar_name'] = $image;
+            if(!empty($request->file('avatar'))){
+                $image =  base64_encode(file_get_contents($request->file('avatar')));
+                $objects['avatar_name'] = $image;
+            }
 
-        $this->userMain->find($request->id)->update($this->sanitizerUser->postEdit($objects));
+            $sanitizer = $this->sanitizerUser->postEdit($objects);
+
+            $this->userMain->findorFail($request->id)->update($sanitizer);
+
+            return  [
+                'code'      => 200,
+                'message'   => 'Usuario alterado com sucesso',
+                'data'      => null
+            ];
+
+        } catch (\Throwable $th) {
+            //throw $th;
+
+            return [
+                'code'      => $th->getCode(),
+                'message'   => $th->getMessage(),
+                'data'      => null
+            ];
+        }
     }
 
     public function postDelete(PostDeleteUser $request)
-    {
+    {   
         $this->userMain->find($request->id)->delete();
     }
 
