@@ -8,7 +8,7 @@ class PostUpdateUser extends FormRequest
 {
 
     public function rules()
-    {
+    {   //dd($this->all());
         return
             [
                 'id'     => 'required|exists:users,id',
