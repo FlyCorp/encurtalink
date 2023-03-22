@@ -3,7 +3,7 @@
 <html lang="en" data-theme="light">
   <!--begin::Head-->
   <head>
-    <title>Aguarde! Você está sendo redirecionado...</title>
+    <title>{{$link->link}}</title>
     <meta charset="utf-8" />
     <meta name="description" content="Link de redirecionamento do encurtador de links" />
     <meta name="keywords" content="encurtador" />
