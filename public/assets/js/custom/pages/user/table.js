@@ -4,7 +4,7 @@ $(function () {
 
     /*
     |--------------------------------------------------------------------------
-    | DataTable 
+    | DataTable
     |--------------------------------------------------------------------------
     */
     let table = $('.datatable-user')
@@ -85,13 +85,13 @@ $(function () {
                                                         <path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="currentColor"></path>
                                                     </svg>
                                                 </span>
-                                                <!--end::Svg Icon-->Editar link</a>
+                                                <!--end::Svg Icon-->Editar usuário</a>
                                             </div>
                                             <!--end::Menu item-->
                                             <div class="separator my-5"></div>
                                             <!--begin::Menu item-->
                                             <div class="menu-item px-3">
-                                                <a href="#" class="menu-link px-3 delete-url" 
+                                                <a href="#" class="menu-link px-3 delete-url"
                                                 data-id="${data.id}" data-name="${data.name}">
                                                 <!--begin::Svg Icon | path: icons/duotune/general/gen051.svg-->
                                                 <span class="svg-icon svg-icon-3 me-3">
@@ -101,7 +101,7 @@ $(function () {
                                                         <path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor"></path>
                                                     </svg>
                                                 </span>
-                                                <!--end::Svg Icon-->Excluir link</a>
+                                                <!--end::Svg Icon-->Editar usuário</a>
                                             </div>
                                             <!--end::Menu item-->
                                         </div>
@@ -190,7 +190,7 @@ $(function () {
                             // Show loading indication
                             submitButton.setAttribute('data-kt-indicator', 'on');
 
-                            // Disable button to avoid multiple click 
+                            // Disable button to avoid multiple click
                             submitButton.disabled = true;
 
                             // Simulate form submission. For more info check the plugin's official documentation: https://sweetalert2.github.io/
@@ -278,8 +278,8 @@ $(function () {
                     }
                 }).then(function (result) {
                     if (result.value) {
-                        form.reset(); // Reset form	
-                        modal.hide(); // Hide modal				
+                        form.reset(); // Reset form
+                        modal.hide(); // Hide modal
                     } else if (result.dismiss === 'cancel') {
                         //none
                     }
@@ -407,7 +407,7 @@ $(function () {
                             // Show loading indication
                             submitButton.setAttribute('data-kt-indicator', 'on');
 
-                            // Disable button to avoid multiple click 
+                            // Disable button to avoid multiple click
                             submitButton.disabled = true;
 
                             // Simulate form submission. For more info check the plugin's official documentation: https://sweetalert2.github.io/
@@ -447,7 +447,7 @@ $(function () {
                                         modal.hide();
                                     },
                                     error: function (response, status, message) {
-                                        
+
                                         switch (true) {
                                             case (response.code == 422):
                                                 $.each(response.responseJSON.errors, function (index, element) {
@@ -496,8 +496,8 @@ $(function () {
                     }
                 }).then(function (result) {
                     if (result.value) {
-                        form.reset(); // Reset form	
-                        modal.hide(); // Hide modal				
+                        form.reset(); // Reset form
+                        modal.hide(); // Hide modal
                     } else if (result.dismiss === 'cancel') {
                         //none
                     }
