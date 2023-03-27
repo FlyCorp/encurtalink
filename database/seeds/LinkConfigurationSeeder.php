@@ -60,7 +60,7 @@ class LinkConfigurationSeeder extends Seeder
                     <!-- End Google Tag Manager (noscript) -->',
                     'description'   => 'Script padrão para o cabeçalho do link de redirecionamento',
                     'created_at'    => now(),
-                    'updated_at'    => now(),
+                    'updated_at'    => now(), 
                 ],
             ]
         );
