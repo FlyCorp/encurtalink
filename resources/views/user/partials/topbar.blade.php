@@ -4,7 +4,7 @@
         <!--begin::Page title-->
         <div class="page-title d-flex flex-column me-5 py-2">
             <!--begin::Title-->
-            <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Usuaário</h1>
+            <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Usuário</h1>
             <!--end::Title-->
             <!--begin::Breadcrumb-->
             <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">

@@ -48,152 +48,22 @@
                             <!--begin::Card title-->
                             <!--begin::Card toolbar-->
                             <div class="card-toolbar">
+
                                 <!--begin::Toolbar-->
                                 <div class="d-flex justify-content-end" data-kt-subscription-table-toolbar="base">
 
-                                    {{-- <!--begin::Filter-->
-                          <button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                            <!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-                            <span class="svg-icon svg-icon-2">
-                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="currentColor"></path>
-                              </svg>
-                            </span>
-                            <!--end::Svg Icon-->Filter
-                          </button>
-                          <!--begin::Menu 1-->
-                          <div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true" style="">
-                            <!--begin::Header-->
-                            <div class="px-7 py-5">
-                              <div class="fs-5 text-dark fw-bold">Filter Options</div>
-                            </div>
-                            <!--end::Header-->
-                            <!--begin::Separator-->
-                            <div class="separator border-gray-200"></div>
-                            <!--end::Separator-->
-                            <!--begin::Content-->
-                            <div class="px-7 py-5" data-kt-subscription-table-filter="form">
-                              <!--begin::Input group-->
-                              <div class="mb-10">
-                                <label class="form-label fs-6 fw-semibold">Month:</label>
-                                <select class="form-select form-select-solid fw-bold select2-hidden-accessible" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="month" data-hide-search="true" data-select2-id="select2-data-10-qetb" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
-                                  <option data-select2-id="select2-data-12-0tm0"></option>
-                                  <option value="jan">January</option>
-                                  <option value="feb">February</option>
-                                  <option value="mar">March</option>
-                                  <option value="apr">April</option>
-                                  <option value="may">May</option>
-                                  <option value="jun">June</option>
-                                  <option value="jul">July</option>
-                                  <option value="aug">August</option>
-                                  <option value="sep">September</option>
-                                  <option value="oct">October</option>
-                                  <option value="nov">November</option>
-                                  <option value="dec">December</option>
-                                </select>
-                                <span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-11-05wv" style="width: 100%;">
-                                  <span class="selection">
-                                    <span class="select2-selection select2-selection--single form-select form-select-solid fw-bold" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-nxjz-container" aria-controls="select2-nxjz-container">
-                                      <span class="select2-selection__rendered" id="select2-nxjz-container" role="textbox" aria-readonly="true" title="Select option">
-                                        <span class="select2-selection__placeholder">Select option</span>
-                                      </span>
-                                      <span class="select2-selection__arrow" role="presentation">
-                                        <b role="presentation"></b>
-                                      </span>
-                                    </span>
-                                  </span>
-                                  <span class="dropdown-wrapper" aria-hidden="true"></span>
-                                </span>
-                              </div>
-                              <!--end::Input group-->
-                              <!--begin::Input group-->
-                              <div class="mb-10">
-                                <label class="form-label fs-6 fw-semibold">Status:</label>
-                                <select class="form-select form-select-solid fw-bold select2-hidden-accessible" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="status" data-hide-search="true" data-select2-id="select2-data-13-ylr4" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
-                                  <option data-select2-id="select2-data-15-okht"></option>
-                                  <option value="Active">Active</option>
-                                  <option value="Expiring">Expiring</option>
-                                  <option value="Suspended">Suspended</option>
-                                </select>
-                                <span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-14-j6sb" style="width: 100%;">
-                                  <span class="selection">
-                                    <span class="select2-selection select2-selection--single form-select form-select-solid fw-bold" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-q7f7-container" aria-controls="select2-q7f7-container">
-                                      <span class="select2-selection__rendered" id="select2-q7f7-container" role="textbox" aria-readonly="true" title="Select option">
-                                        <span class="select2-selection__placeholder">Select option</span>
-                                      </span>
-                                      <span class="select2-selection__arrow" role="presentation">
-                                        <b role="presentation"></b>
-                                      </span>
-                                    </span>
-                                  </span>
-                                  <span class="dropdown-wrapper" aria-hidden="true"></span>
-                                </span>
-                              </div>
-                              <!--end::Input group-->
-                              <!--begin::Input group-->
-                              <div class="mb-10">
-                                <label class="form-label fs-6 fw-semibold">Billing Method:</label>
-                                <select class="form-select form-select-solid fw-bold select2-hidden-accessible" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="billing" data-hide-search="true" data-select2-id="select2-data-16-6k44" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
-                                  <option data-select2-id="select2-data-18-zjii"></option>
-                                  <option value="Auto-debit">Auto-debit</option>
-                                  <option value="Manual - Credit Card">Manual - Credit Card</option>
-                                  <option value="Manual - Cash">Manual - Cash</option>
-                                  <option value="Manual - Paypal">Manual - Paypal</option>
-                                </select>
-                                <span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-17-dn77" style="width: 100%;">
-                                  <span class="selection">
-                                    <span class="select2-selection select2-selection--single form-select form-select-solid fw-bold" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-dsrs-container" aria-controls="select2-dsrs-container">
-                                      <span class="select2-selection__rendered" id="select2-dsrs-container" role="textbox" aria-readonly="true" title="Select option">
-                                        <span class="select2-selection__placeholder">Select option</span>
-                                      </span>
-                                      <span class="select2-selection__arrow" role="presentation">
-                                        <b role="presentation"></b>
-                                      </span>
-                                    </span>
-                                  </span>
-                                  <span class="dropdown-wrapper" aria-hidden="true"></span>
-                                </span>
-                              </div>
-                              <!--end::Input group-->
-                              <!--begin::Input group-->
-                              <div class="mb-10">
-                                <label class="form-label fs-6 fw-semibold">Product:</label>
-                                <select class="form-select form-select-solid fw-bold select2-hidden-accessible" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="product" data-hide-search="true" data-select2-id="select2-data-19-qryy" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
-                                  <option data-select2-id="select2-data-21-6x92"></option>
-                                  <option value="Basic">Basic</option>
-                                  <option value="Basic Bundle">Basic Bundle</option>
-                                  <option value="Teams">Teams</option>
-                                  <option value="Teams Bundle">Teams Bundle</option>
-                                  <option value="Enterprise">Enterprise</option>
-                                  <option value=" Enterprise Bundle">Enterprise Bundle</option>
-                                </select>
-                                <span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-20-cfb4" style="width: 100%;">
-                                  <span class="selection">
-                                    <span class="select2-selection select2-selection--single form-select form-select-solid fw-bold" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-kcfb-container" aria-controls="select2-kcfb-container">
-                                      <span class="select2-selection__rendered" id="select2-kcfb-container" role="textbox" aria-readonly="true" title="Select option">
-                                        <span class="select2-selection__placeholder">Select option</span>
-                                      </span>
-                                      <span class="select2-selection__arrow" role="presentation">
-                                        <b role="presentation"></b>
-                                      </span>
-                                    </span>
-                                  </span>
-                                  <span class="dropdown-wrapper" aria-hidden="true"></span>
-                                </span>
-                              </div>
-                              <!--end::Input group-->
-                              <!--begin::Actions-->
-                              <div class="d-flex justify-content-end">
-                                <button type="reset" class="btn btn-light btn-active-light-primary fw-semibold me-2 px-6" data-kt-menu-dismiss="true" data-kt-subscription-table-filter="reset">Reset</button>
-                                <button type="submit" class="btn btn-primary fw-semibold px-6" data-kt-menu-dismiss="true" data-kt-subscription-table-filter="filter">Apply</button>
-                              </div>
-                              <!--end::Actions-->
-                            </div>
-                            <!--end::Content-->
-                          </div>
-                          <!--end::Menu 1-->
-                          <!--end::Filter--> --}}
-
+                                    <!--begin::Add subscription-->
+                                    <a href="{{route('urls.config.index')}}" title="Configurar Link do link" class="btn btn-light btn-active-primary fw-bold" style="margin-right: 3px;">
+                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
+                                        <span class="svg-icon svg-icon-2">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="currentColor"></path>
+                                                <path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </a>
+                                    <!--end::Add subscription-->
                                     <!--begin::Add subscription-->
                                     <a type="button" data-bs-toggle="modal" data-bs-target="#kt_modal_new_card"
                                         class="btn btn-primary">
@@ -211,6 +81,8 @@
                                         <!--end::Svg Icon-->Novo link
                                     </a>
                                     <!--end::Add subscription-->
+
+
                                 </div>
                                 <!--end::Toolbar-->
                                 <!--begin::Group actions-->
@@ -253,9 +125,9 @@
                                                     aria-label="Billing: activate to sort column ascending"
                                                     style="width: 201.141px;">Link</th>
                                                 <!--<th class="min-w-125px sorting" tabindex="0"
-                                                    aria-controls="kt_subscriptions_table" rowspan="1" colspan="1"
-                                                    aria-label="Billing: activate to sort column ascending"
-                                                    style="width: 201.141px;">Destino</th>-->
+                                                        aria-controls="kt_subscriptions_table" rowspan="1" colspan="1"
+                                                        aria-label="Billing: activate to sort column ascending"
+                                                        style="width: 201.141px;">Destino</th>-->
                                                 <th class="text-end min-w-70px sorting_disabled" rowspan="1"
                                                     colspan="1" aria-label="Ações" style="width: 145.781px;">Ações
                                                 </th>
@@ -283,4 +155,6 @@
     </div>
     @include('urls.partials.modal-create-url')
     @include('urls.partials.modal-edit-url')
+
+    @include('urls.partials.modal-configuration-link')
 @endsection

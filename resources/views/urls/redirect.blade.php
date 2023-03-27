@@ -1,3 +1,6 @@
+{{-- Service injection --}}
+@inject('composerLinkConfig', 'App\Composers\ComposerLinkConfig')
+
 <!DOCTYPE html>
 
 <html lang="en" data-theme="light">
@@ -114,7 +117,7 @@
             let url = $(`input[type="hidden"][name="link"]`).val();
             setTimeout(() => {
                 window.location = url;
-            }, 3000);
+            }, {!!$composerLinkConfig->getKeyValues()['REDIRECT_TIMEOUT']!!});
         });
     </script>
     <!--end::Javascript-->
