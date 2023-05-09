@@ -74,6 +74,20 @@
             <div class="fv-plugins-message-container invalid-feedback"></div>
         </div>
         <!--end::Input group-->
+        <!--begin::Input group-->
+        <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
+
+            <label class="form-check form-switch form-check-custom form-check-solid">
+                <!--begin::Input-->
+                <input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked id="redirect" name="redirect">
+                <!--end::Input-->
+                <!--end::Label-->
+                <span class="form-check-label text-dark fs-6"> Redirecionar </span>
+                <!--end::Label-->
+            </label>
+            <div class="fv-plugins-message-container invalid-feedback"></div>
+        </div>
+        <!--end::Input group-->
             <!--begin::Actions-->
             <div class="text-center pt-15">
               <button type="reset" id="kt_modal_new_card_cancel" class="btn btn-light me-3">Cancelar</button>

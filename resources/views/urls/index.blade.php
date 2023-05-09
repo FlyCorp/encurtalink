@@ -124,10 +124,10 @@
                                                     aria-controls="kt_subscriptions_table" rowspan="1" colspan="1"
                                                     aria-label="Billing: activate to sort column ascending"
                                                     style="width: 201.141px;">Link</th>
-                                                <!--<th class="min-w-125px sorting" tabindex="0"
+                                                <th class="min-w-125px sorting" tabindex="0"
                                                         aria-controls="kt_subscriptions_table" rowspan="1" colspan="1"
                                                         aria-label="Billing: activate to sort column ascending"
-                                                        style="width: 201.141px;">Destino</th>-->
+                                                        style="width: 201.141px;">Redirecionar</th>
                                                 <th class="text-end min-w-70px sorting_disabled" rowspan="1"
                                                     colspan="1" aria-label="Ações" style="width: 145.781px;">Ações
                                                 </th>
