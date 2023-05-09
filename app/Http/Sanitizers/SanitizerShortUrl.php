@@ -13,6 +13,7 @@ class SanitizerShortUrl
             'description' => $data['description'],
             'script_header' => $data['script_header'] ? $data['script_header'] : null,
             'script_body' => $data['script_body'] ? $data['script_body'] : null,
+            'redirect' => $data['redirect'] ? $data['redirect'] : 0,
         ];
     }
 
@@ -24,6 +25,7 @@ class SanitizerShortUrl
             'description' => $data['description'],
             'script_header' => $data['script_header'] ? $data['script_header'] : null,
             'script_body' => $data['script_body'] ? $data['script_body'] : null,
+            'redirect' => $data['redirect'] ? $data['redirect'] : 0,
         ];
     }
 

@@ -35,17 +35,22 @@ class ShortUrlController extends Controller
     public function getUrl($code)
     {
         $link = $this->shortUrl->where('code', $code)->first();
-        return view('urls.redirect', compact('link'));
+
+        if($link->redirect){
+            return view('urls.redirect', compact('link'));
+        }
+
+        return redirect($link->link);
     }
 
     public function getEdit($id)
-    {   
+    {
         $shortUrl = $this->shortUrl->findOrFail($id);
         return view('urls.update',compact('shortUrl'));
     }
 
     public function postEdit($id,PostUpdateShortUrl $request)
-    {   
+    {
         $this->shortUrl->find($id)->update($this->sanitizerShortUrl->postEdit($request->all()));
         return redirect()->route('urls.index');
     }
@@ -94,6 +99,7 @@ class ShortUrlController extends Controller
                     'description'   => $item->description,
                     'script_header' => $item->script_header,
                     'script_body'   => $item->script_body,
+                    'redirect'      => $item->redirect,
                 ];
         }
 

@@ -26,8 +26,8 @@ $(function () {
             {targets:  0, orderable: true,  width: '5%'},
             {targets:  1, orderable: true},
             {targets:  2, orderable: false},
-            /*{targets:  3, orderable: false},*/
-            {targets:  3, orderable: false, class: 'text-end'},
+            {targets:  3, orderable: false},
+            {targets:  4, orderable: false, class: 'text-end'},
         ],
         columns:
         [
@@ -64,6 +64,11 @@ $(function () {
                             </div>
                             <!--end::Input group-->
                     `;
+                }
+            },
+            {
+                data: function(data, type, row, meta){
+                    return `<span class="badge badge-light-${data.redirect ? 'success' : 'danger'} me-auto">${data.redirect ? 'Sim' : 'Não'}</span>`;
                 }
             },
             {
