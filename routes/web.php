@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('/', function () {
+    return redirect()->route('login');
+});
+
 Route::group(['middleware' => 'auth'], function () {
     //Route::get('', 'SiteController@index')->name('main');
     Route::get('/home', 'HomeController@index')->name('home');
