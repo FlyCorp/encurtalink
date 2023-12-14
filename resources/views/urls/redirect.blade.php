@@ -6,7 +6,7 @@
 <html lang="en" data-theme="light">
   <!--begin::Head-->
   <head>
-    <title>{{$link->link}}</title>
+    <title>{{route('web.getUrl', $link->code)}}</title>
     <meta charset="utf-8" />
     <meta name="description" content="Link de redirecionamento do encurtador de links" />
     <meta name="keywords" content="encurtador" />
