@@ -4,12 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', function () {
-    return redirect()->route('login');
-});
+Route::get('/', 'MainController@showLogin')->name('main');
 
 Route::group(['middleware' => 'auth'], function () {
-    //Route::get('', 'SiteController@index')->name('main');
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
 });
@@ -31,14 +28,27 @@ Route::group(['middleware' => 'auth', 'prefix' => 'urls', 'as' => 'urls.'], func
     Route::get('configuracoes/buscar/{term?}', 'LinkConfigurationController@getSearch')->name('config.getSearch');
 });
 
-
-
 Route::group(['middleware' => 'auth', 'prefix' => 'user', 'as' => 'user.'], function () {
     Route::get('', 'UserController@index')->name('index');
     Route::post('cadastrar', 'UserController@postCreate')->name('postCreate');
     Route::post('{id}/editar', 'UserController@postEdit')->name('postEdit');
     Route::post('{id}/excluir', 'UserController@postDelete')->name('postDelete');
     Route::get('buscar/{term?}', 'UserController@getSearch')->name('getSearch');
+});
+
+Route::group(['middleware' => 'web', 'prefix' => 'nps', 'as' => 'nps.'], function () {
+    Route::get('agradecimento', 'NpsController@feedback')->name('feedback');
+    Route::get('{uuid}', 'NpsController@show')->name('show');
+    Route::get('{uuid}/voto/{vote}', 'NpsController@vote')->name('vote');
+    Route::post('{uuid}/voto/{vote}', 'NpsController@reason')->name('reason');
+});
+
+Route::group(['middleware' => 'auth', 'prefix' => 'nps-links', 'as' => 'nps-links.'], function () {
+    Route::get('', 'NpsController@index')->name('index');
+    Route::post('cadastrar', 'NpsController@postCreate')->name('postCreate');
+    Route::post('{id}/editar', 'NpsController@postEdit')->name('postEdit');
+    Route::post('{id}/excluir', 'NpsController@postDelete')->name('postDelete');
+    Route::get('buscar/{term?}', 'NpsController@getSearch')->name('getSearch');
 });
 
 // ADD IN LAST FILE THIS ROUTE BLOCK
