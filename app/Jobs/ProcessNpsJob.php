@@ -9,6 +9,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use App\NpsLink;
 use App\Jobs\MaisChatWhatsappSendMessageJob;
+use App\Jobs\OctaDeskWhatsappSendMessageJob;
 use App\Jobs\TakeBlipWhatsappSendMessageJob;
 
 class ProcessNpsJob implements ShouldQueue
@@ -41,6 +42,9 @@ class ProcessNpsJob implements ShouldQueue
             switch ($this->nps->config_gateway) {
                 case 'MaisChat':
                     MaisChatWhatsappSendMessageJob::dispatch($this->nps);
+                    break;
+                case 'OctaDesk':
+                    OctaDeskWhatsappSendMessageJob::dispatch($this->nps);
                     break;
 
                 default://TakeBlip
