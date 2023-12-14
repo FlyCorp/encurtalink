@@ -177,7 +177,7 @@ class NpsController extends Controller
                     'config_gateway'        => $item->config_gateway,
                     'config_number'         => $item->config_number,
                     'vote'                  => $item->vote,
-                    'voted_at'              => $item->voted_at->format("d/m/Y H:i"),
+                    'voted_at'              => $item->voted_at ? $item->voted_at->format("d/m/Y H:i") : null,
                     'reason_channel'        => $item->reason_channel,
                     'reason_description'    => $item->reason_description,
                     'nps_link'              => route("nps.show", ["uuid" => $item->uuid]),
