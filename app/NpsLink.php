@@ -32,7 +32,7 @@ class NpsLink extends Model
             // Obtenha os valores originais
             $old = $nps->getOriginal();
 
-            if($old["vote"] != $nps->vote){
+            if($nps->vote && ($old["vote"] != $nps->vote)){
                 $nps->voted_at = now()->format("Y-m-d H:i");
             }
         });
