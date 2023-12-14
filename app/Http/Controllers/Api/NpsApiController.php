@@ -138,6 +138,7 @@ class NpsApiController extends Controller
         ->where("campaign_name", $data["campaign_name"])
         ->where("config_gateway", $data["config_gateway"])
         ->where("config_number", $data["config_number"])
+        ->whereDate("voted_at", Carbon::today()) // Adicione esta condição
         ->firstOr(function () use($data){
             return $this->npsLink->create($data);
         });
