@@ -4,6 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\NpsMonthRating;
+use Illuminate\Contracts\Validation\Validator as ValidatorContract;
 
 class NpsApiReceive extends FormRequest
 {
@@ -11,6 +13,16 @@ class NpsApiReceive extends FormRequest
     protected function prepareForValidation()
     {
 
+    }
+
+    protected function failedValidation(ValidatorContract $validator)
+    {
+        $response = response()->json([
+            'message' => 'Os dados fornecidos são inválidos.',
+            'errors' => $validator->errors(),
+        ], 422);
+
+        throw new \Illuminate\Validation\ValidationException($validator, $response);
     }
 
     /**
@@ -21,7 +33,13 @@ class NpsApiReceive extends FormRequest
     public function rules()
     {
         return [
-            'Campaign_name'      => 'required',
+            'Campaign_name'      => [
+                'required',
+                new NpsMonthRating('campaign_name', [
+                    'config_gateway' => $this->input('Config_gateway'),
+                    'config_number' => $this->input('Config_number'),
+                ]),
+            ],
             'Client_name'        => 'required',
             'Client_document'    => 'required',
             'Client_representant'    => 'required',
