@@ -1,30 +1,33 @@
 <?php
 
-namespace App\Rules;
+namespace App\Console\Commands;
 
-use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Console\Command;
 
-class ValidCellphone implements Rule
+class TestCellPhoneValidation extends Command
 {
     /**
-     * Create a new rule instance.
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'app:test-cellphone-validation {phone}';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Verifica se o numero de telefone informado é válido';
+
+    /**
+     * Create a new command instance.
      *
      * @return void
      */
     public function __construct()
     {
-        //
-    }
-
-    public function passes($attribute, $value)
-    {
-        // Verifica se o número restante é um número de celular válido e não um número fixo
-        return $this->validateCellphoneBr($value);
-    }
-
-    public function message()
-    {
-        return 'O número de telefone deve ser um número de celular válido no Brasil.';
+        parent::__construct();
     }
 
     public function validateCellphoneBr($value)
@@ -50,5 +53,15 @@ class ValidCellphone implements Rule
 
         // Verifique se é um número de celular e não é uma sequência específica e o DDD é válido
         return preg_match('/^(9[0-9]{8})$/', $value) && !preg_match('/^(\d)\1+$/', $value) && in_array(substr($value, 0, 2), $valid_ddds);
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return int
+     */
+    public function handle()
+    {
+        dd(self::validateCellphoneBr($this->argument('phone')));
     }
 }
