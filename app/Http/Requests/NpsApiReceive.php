@@ -5,6 +5,8 @@ namespace App\Http\Requests;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Rules\NpsMonthRating;
+use App\Rules\ValidCellphone;
+
 use Illuminate\Contracts\Validation\Validator as ValidatorContract;
 
 class NpsApiReceive extends FormRequest
@@ -72,6 +74,7 @@ class NpsApiReceive extends FormRequest
             'Config_number' => [
                 'required',
                 'numeric',
+                new ValidCellphone
             ],
         ];
     }
