@@ -38,7 +38,8 @@ class TakeBlipApiUtil
 
         $options = [
             'headers' => $headers,
-            'json' => $data
+            'json' => $data,
+            'verify' => false
         ];
 
         return $client->request($method, $endpoint, $options);

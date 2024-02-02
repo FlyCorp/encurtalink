@@ -58,10 +58,6 @@ class ApiClient
             ]);
         }
 
-        $http = $http->withOptions([
-            'verify' => false, // Ignora a verificação de certificado SSL
-        ]);
-
         $response = $http->withHeaders($headers)->{$method}($endpoint, $data);
 
         $response->throw();// Lança uma exceção Illuminate\Http\Client\RequestException em caso de erro na requisição.
