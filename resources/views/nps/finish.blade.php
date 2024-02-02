@@ -372,7 +372,7 @@
               <h2>Muito obrigado pelo seu voto!</h2>
               <h3>Agora gostaríamos de saber qual seguimento e o motivo pelo qual você nos deu essa nota.​</h3>
 
-              <div class="row">
+              <div class="row" hidden>
                 <div class="col-12">
                   <div>
                     <div class="row">
