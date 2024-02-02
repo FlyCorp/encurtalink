@@ -261,7 +261,7 @@
         </div>
         <div class="row pt-4 pt-md-5 justify-content-center">
           <div class="col-lg-9 col-xl-8 col-xxl-7 text-center">
-            <h2>Em uma escala de 0 a 10, qual a probabilidade de você recomendar nossos produtos?</h2>
+            <h2>Em uma escala de 0 a 10, qual a probabilidade de você recomendar nossos produtos para amigos e familiares?</h2>
           </div>
         </div>
         <div class="row pt-4 pb-4 pb-md-5">
