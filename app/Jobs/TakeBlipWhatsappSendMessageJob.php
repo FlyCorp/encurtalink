@@ -45,12 +45,14 @@ class TakeBlipWhatsappSendMessageJob implements ShouldQueue
             "content" => [
                 "type" => "template",
                 "template" => [
-                    "name" => "pesquisa_ecommerce_v2",
+                    "name" => "npsv6",
                     "language" => ["code" => "pt_BR", "policy" => "deterministic"],
                     "components" => [
                         [
-                            "type" => "body",
-                            "parameters" => [["type" => "text", "text" => "*{$this->nps->client_name}*"]],
+                            "type" => "button",
+                            "sub_type" => "url",
+                            "index" => 0,
+                            "parameters" => [["type" => "text", "text" => $this->nps->uuid]],
                         ],
                     ],
                 ],

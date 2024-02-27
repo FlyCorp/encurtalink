@@ -351,6 +351,8 @@
     <title>NPS - Central Nutrition</title>
   </head>
   <body>
+    <form action="{{ route('nps.reason', [$nps->uuid, $nps->vote]) }}" method="post">
+      @csrf
       <section class="nps">
 
       <div class="container">
@@ -366,12 +368,68 @@
 
           <div class="col-lg-9 col-xl-8 col-xxl-7 text-center">
 
-            <div class="container mb-2 pb-5">
+            <div class="container mb-2">
               <h2>Muito obrigado pelo seu voto!</h2>
+              <h3>Agora gostaríamos de saber qual seguimento e o motivo pelo qual você nos deu essa nota.​</h3>
+
+              <div class="row" hidden>
+                <div class="col-12">
+                  <div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input type="radio" name="reason_channel" id="five" value="atendimento" {{(!$nps->reason_channel || $nps->reason_channel == "atendimento") ? 'checked' : null }}>
+                        <label for="five" class="box fifth w-100">
+                          <div class="course">
+                            <span class="circle"></span>
+                            <span class="subject">Atendimento</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="radio" name="reason_channel" id="six" value="entrega" {{($nps->reason_channel == "entrega") ? 'checked' : null }}>
+                        <label for="six" class="box sixth w-100">
+                          <div class="course">
+                            <span class="circle"></span>
+                            <span class="subject">Entrega</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="radio" name="reason_channel" id="seven" value="qualidade" {{($nps->reason_channel == "qualidade") ? 'checked' : null }}>
+                        <label for="seven" class="box seveth w-100">
+                          <div class="course">
+                            <span class="circle"></span>
+                            <span class="subject">Qualidade</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="radio" name="reason_channel" id="eight" value="outros" {{($nps->reason_channel == "outros") ? 'checked' : null }}>
+                        <label for="eight" class="box eighth w-100">
+                          <div class="course">
+                            <span class="circle"></span>
+                            <span class="subject">Outros</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
 
+          <div class="col-lg-9 col-xl-8 col-xxl-7 text-center">
+            <div class="container">
+              <div class="row justify-content-center pt-3">
+              <div class="col-lg-12">
+                <textarea name="reason_description" placeholder="Escreva aqui o que motivou dar a nota acima" rows="4" class="form-control textoNps" required>{{$nps->reason_description}}</textarea>
+                <button type="submit" class="btn buttonNps">Enviar agora</button>
+              </div>
+            </div>
+            </div>
+          </div>
 
           <div class="col-lg-9 col-xl-8 col-xxl-7 text-center">
             <div class="container">
@@ -413,6 +471,7 @@
 
       </div>
     </section>
+    </form>
 
   </body>
 </html>

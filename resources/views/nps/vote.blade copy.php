@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -246,10 +245,6 @@
         height: 120px;
       }
 
-      .img-footer {
-        height: 90px;
-      }
-
       .padding-bottom {
         padding-bottom: 80px;
       }
@@ -266,10 +261,6 @@
 
         .img-logo {
           height: 90px;
-        }
-
-        .img-footer {
-          height: 70px;
         }
       }
 
@@ -337,20 +328,21 @@
           </div>
         </div>
         <div class="row pt-5 pb-4 pb-md-4">
-          <div class="col-12 voteNps">
-            @for ($i = 0; $i <= 10; $i++)
+            <div class="col-12 voteNps">
+             @for ($i = 0; $i <= 10; $i++)
              <a href="{{route('nps.vote', [$nps->uuid, $i])}}" class="voto-list-item">{{$i}}</a>
              @endfor
           </div>
         </div>
         <div class="row pt-4 pt-md-5 pb-5 pb-lg-0 justify-content-center">
-          <div class="col-10 col-sm-8 col-md-7 col-lg-5 col-xl-4 text-center padding-bottom">
+          <div
+            class="col-10 col-sm-8 col-md-7 col-lg-5 col-xl-4 text-center padding-bottom">
             <img src="{{asset('assets/media/nps/title.png')}}" alt="" class="img-fluid" />
           </div>
         </div>
         <div class="row pb-5">
           <div class="col-12 text-center">
-            <img src="{{asset('assets/media/nps/footer.png')}}" alt="" class="img-footer" />
+            <img src="{{asset('assets/media/nps/footer.png')}}" alt="" class="img-fluid" />
           </div>
           <div class="col-12 pt-2 text-center">
             <a href="#" class="link-social">
