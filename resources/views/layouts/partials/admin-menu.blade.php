@@ -142,7 +142,7 @@
                 <!--begin::User info-->
                 <div class="ms-2">
                     <!--begin::Name-->
-                    <a href="dashboard.html#" class="text-gray-800 text-hover-primary fs-6 fw-bold lh-1">{{auth()->user()->name}}</a>
+                    <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold lh-1">{{auth()->user()->name}}</a>
                     <!--end::Name-->
                 </div>
                 <!--end::User info-->
@@ -181,7 +181,7 @@
                             <!--begin::Username-->
                             <div class="d-flex flex-column">
                                 <div class="fw-bold d-flex align-items-center fs-5">{{auth()->user()->name}}</div>
-                                <a href="dashboard.html#"
+                                <a href="#"
                                     class="fw-semibold text-muted text-hover-primary fs-7">{{auth()->user()->email}}</a>
                             </div>
                             <!--end::Username-->

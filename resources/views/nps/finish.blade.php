@@ -116,7 +116,7 @@
 
       /* CONSUMIDOR */
       section.nps {
-        min-height: 100vh;
+        min-height: 50vh;
         background: url("/assets/media/nps/bg.png") no-repeat;
         background-size: cover;
         background-position-x: center;
@@ -125,14 +125,14 @@
         position: relative;
       }
 
-      .demo-bg {
-        opacity: 0.5;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background: #fff;
-        width: 100%;
-        height: 100%;
+      section.nps-footer {
+        height: 60vh;
+        background: url("/assets/media/nps/bg-footer.png") no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: top;
+        overflow: hidden;
+        position: relative;
       }
 
       section.nps h2 {
@@ -168,7 +168,35 @@
         transition: 0.3s;
       }
 
+      @media (max-width: 1199.98px) {
+
+        section.nps {
+          min-height: 70vh;
+          background-position-x: center;
+          background-position-y: top;
+        }
+
+        section.nps-footer {
+          height: 30vh;
+          background-position-x: right;
+          background-position-y: top;
+        }
+      }
+
       @media (max-width: 991.98px) {
+
+        section.nps {
+          min-height: 70vh;
+          background-position-x: center;
+          background-position-y: top;
+        }
+
+        section.nps-footer {
+          height: 30vh;
+          background-position-x: right;
+          background-position-y: top;
+        }
+
         section.nps .voteNps .voto-list-item {
           height: 65px;
           font-size: 20px;
@@ -226,6 +254,19 @@
       }
 
       @media (max-width: 767.98px) {
+
+        section.nps {
+          min-height: 70vh;
+          background-position-x: center;
+          background-position-y: top;
+        }
+
+        section.nps-footer {
+          height: 30vh;
+          background-position-x: right;
+          background-position-y: top;
+        }
+
         section.nps h2 {
           font-size: 1.4rem;
         }
@@ -245,11 +286,29 @@
         height: 120px;
       }
 
+      .img-footer {
+        height: 90px;
+      }
+
       .padding-bottom {
         padding-bottom: 80px;
       }
 
       @media (max-width: 575.98px) {
+
+        section.nps {
+          min-height: 65vh;
+          background-position-x: center;
+          background-position-y: top;
+           padding-top: 50px;
+        }
+
+        section.nps-footer {
+          height: 35vh;
+          background-position-x: right;
+          background-position-y: top;
+        }
+
         section.nps .voteNps .voto-list-item {
           height: 40px;
           font-size: 16px;
@@ -262,19 +321,23 @@
         .img-logo {
           height: 90px;
         }
+
+        .img-footer {
+          height: 70px;
+        }
       }
 
-      section.nps .link-social {
+      section.nps-footer .link-social {
         padding: 0 0.5rem;
-        color: #808080;
+        color: #ffffff;
       }
 
-      section.nps .link-social i {
+      section.nps-footer .link-social i {
         font-size: 2em;
       }
 
       @media (max-width: 575.98px) {
-        section.nps .link-social i {
+        section.nps-footer .link-social i {
           font-size: 1.5em;
         }
       }
@@ -285,6 +348,18 @@
         border: none !important;
         color: #000;
         border-radius: 12px !important;
+      }
+
+      section.nps .btn.buttonNps {
+        margin-top: 1rem;
+        background: #82d9c3;
+        padding: 0.85rem !important;
+        border: none !important;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 12px !important;
+        width: 100%;
+        transition: 0.3s;
       }
 
       section.nps .btn.buttonNps {
@@ -303,69 +378,74 @@
       section.nps .btn.buttonNps:active {
         background: #e0a76d;
       }
+
+      section.nps .btn.buttonNps:hover,
+      section.nps .btn.buttonNps:active {
+        background: #259433;
+      }
     </style>
     <title>NPS - Central Nutrition</title>
   </head>
   <body>
     <form action="{{ route('nps.reason', [$nps->uuid, $nps->vote]) }}" method="post">
-        @csrf
-        <section class="nps">
-            <div class="demo-bg"></div>
-            <div class="container position-relative z-3">
-                <div class="row pt-5 pb-4">
-                    <div class="col-12 text-center">
-                        <img src="{{asset('assets/media/nps/logo.png')}}" alt="" class="img-fluid img-logo"/>
-                    </div>
-                </div>
-                <div class="row pt-4 pt-md-5 justify-content-center">
-                    <div class="col-lg-9 col-xl-8 col-xxl-7 text-center">
-                        <h2>Muito obrigado pelo seu voto!</h2>
-                        <h3>Agora gostaríamos de saber qual seguimento e o motivo pelo qual você nos deu essa nota.​</h3>
-                    </div>
-                </div>
-                <div class="row pt-4 pt-md-5 pb-5 pb-lg-0 justify-content-center">
-                    <div class="container">
-                        <div class="row justify-content-center pt-3">
-                            <div class="col-lg-8"> <!-- Adicionei col-lg-8 para limitar a largura em desktop -->
-                                <textarea name="reason_description" placeholder="Escreva aqui o que motivou dar a nota acima" rows="4" class="form-control textoNps" required>{{$nps->reason_description}}</textarea>
-                                <button type="submit" class="btn buttonNps">Enviar agora</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row pt-4 pt-md-5 pb-5 pb-lg-0 justify-content-center">
-                    <div class="col-10 col-sm-8 col-md-7 col-lg-5 col-xl-4 text-center padding-bottom">
-                        <img src="{{asset('assets/media/nps/title.png')}}" alt="" class="img-fluid" />
-                    </div>
-                </div>
-                <div class="row pb-5">
-                    <div class="col-12 text-center">
-                        <img src="{{asset('assets/media/nps/footer.png')}}" alt="" class="img-fluid" />
-                    </div>
-                    <div class="col-12 pt-2 text-center">
-                        <a href="#" class="link-social">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#" class="link-social">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="link-social">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="link-social">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="link-social">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="link-social">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
+      @csrf
+    <section class="nps">
+      <div class="container position-relative z-3">
+        <div class="row pt-5 pb-4">
+          <div class="col-12 text-center">
+            <img src="{{asset(config('nps.path') . '/logo.png')}}" alt="" class="img-fluid img-logo"/>
+          </div>
+        </div>
+        <div class="row pt-4 pt-md-5 justify-content-center">
+          <div class="col-lg-9 col-xl-8 col-xxl-7 text-center">
+            <h2>Muito obrigado pelo seu voto!</h2>
+              <h3>Agora gostaríamos de saber qual seguimento e o motivo pelo qual você nos deu essa nota.​</h3>
+          </div>
+        </div>
+        <div class="row justify-content-center pt-3">
+            <div class="col-lg-9">
+                <textarea name="reason_description" placeholder="Escreva aqui o que motivou dar a nota acima" rows="4" class="form-control textoNps" required>{{$nps->reason_description}}</textarea>
+                <button type="submit" class="btn buttonNps">Enviar agora</button>
             </div>
-        </section>
+        </div>
+        <div class="row pt-4 pt-md-5 pb-5 pb-lg-0 justify-content-center">
+          <div class="col-10 col-sm-8 col-md-7 col-lg-5 col-xl-4 text-center padding-bottom">
+            <img src="{{asset(config('nps.path') . '/title.png')}}" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="nps-footer">
+      <div class="container h-100">
+        <div class="row align-items-end h-100 pb-3">
+          <div>
+            <div class="col-12 text-center">
+              <img src="{{asset(config('nps.path') . '/footer.png')}}" alt="" class="img-footer"/>
+            </div>
+            <div class="col-12 pt-2 text-center">
+              <a href="#" class="link-social">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" class="link-social">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="link-social">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="link-social">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="link-social">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#" class="link-social">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     </form>
-</body>
+  </body>
 </html>

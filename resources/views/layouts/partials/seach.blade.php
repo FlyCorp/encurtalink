@@ -65,7 +65,7 @@
                         <h3 class="fs-5 text-muted m-0 pb-5" data-kt-search-element="category-title">Users</h3>
                         <!--end::Category title-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <img src="https://preview.keenthemes.com/metronic8/demo10/assets/media/avatars/300-6.jpg" alt="" />
@@ -80,7 +80,7 @@
                         </a>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <img src="https://preview.keenthemes.com/metronic8/demo10/assets/media/avatars/300-2.jpg" alt="" />
@@ -95,7 +95,7 @@
                         </a>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <img src="assets/media/avatars/300-9.jpg" alt="" />
@@ -110,7 +110,7 @@
                         </a>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <img src="https://preview.keenthemes.com/metronic8/demo10/assets/media/avatars/300-14.jpg" alt="" />
@@ -125,7 +125,7 @@
                         </a>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <img src="https://preview.keenthemes.com/metronic8/demo10/assets/media/avatars/300-11.jpg" alt="" />
@@ -143,7 +143,7 @@
                         <h3 class="fs-5 text-muted m-0 pt-5 pb-5" data-kt-search-element="category-title">Customers</h3>
                         <!--end::Category title-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <span class="symbol-label bg-light">
@@ -160,7 +160,7 @@
                         </a>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <span class="symbol-label bg-light">
@@ -177,7 +177,7 @@
                         </a>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <span class="symbol-label bg-light">
@@ -194,7 +194,7 @@
                         </a>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <span class="symbol-label bg-light">
@@ -211,7 +211,7 @@
                         </a>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <span class="symbol-label bg-light">
@@ -231,7 +231,7 @@
                         <h3 class="fs-5 text-muted m-0 pt-5 pb-5" data-kt-search-element="category-title">Projects</h3>
                         <!--end::Category title-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <span class="symbol-label bg-light">
@@ -258,7 +258,7 @@
                         </a>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <span class="symbol-label bg-light">
@@ -284,7 +284,7 @@
                         </a>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <span class="symbol-label bg-light">
@@ -309,7 +309,7 @@
                         </a>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <a href="dashboard.html#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
+                        <a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
                             <!--begin::Symbol-->
                             <div class="symbol symbol-40px me-4">
                                 <span class="symbol-label bg-light">
@@ -394,7 +394,7 @@
                             <!--end::Symbol-->
                             <!--begin::Title-->
                             <div class="d-flex flex-column">
-                                <a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">BoomApp by Keenthemes</a>
+                                <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">BoomApp by Keenthemes</a>
                                 <span class="fs-7 text-muted fw-semibold">#45789</span>
                             </div>
                             <!--end::Title-->
@@ -418,7 +418,7 @@
                             <!--end::Symbol-->
                             <!--begin::Title-->
                             <div class="d-flex flex-column">
-                                <a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Kept API Project Meeting</a>
+                                <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Kept API Project Meeting</a>
                                 <span class="fs-7 text-muted fw-semibold">#84050</span>
                             </div>
                             <!--end::Title-->
@@ -442,7 +442,7 @@
                             <!--end::Symbol-->
                             <!--begin::Title-->
                             <div class="d-flex flex-column">
-                                <a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"KPI Monitoring App Launch</a>
+                                <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"KPI Monitoring App Launch</a>
                                 <span class="fs-7 text-muted fw-semibold">#84250</span>
                             </div>
                             <!--end::Title-->
@@ -466,7 +466,7 @@
                             <!--end::Symbol-->
                             <!--begin::Title-->
                             <div class="d-flex flex-column">
-                                <a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Project Reference FAQ</a>
+                                <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Project Reference FAQ</a>
                                 <span class="fs-7 text-muted fw-semibold">#67945</span>
                             </div>
                             <!--end::Title-->
@@ -490,7 +490,7 @@
                             <!--end::Symbol-->
                             <!--begin::Title-->
                             <div class="d-flex flex-column">
-                                <a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"FitPro App Development</a>
+                                <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"FitPro App Development</a>
                                 <span class="fs-7 text-muted fw-semibold">#84250</span>
                             </div>
                             <!--end::Title-->
@@ -514,7 +514,7 @@
                             <!--end::Symbol-->
                             <!--begin::Title-->
                             <div class="d-flex flex-column">
-                                <a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Shopix Mobile App</a>
+                                <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Shopix Mobile App</a>
                                 <span class="fs-7 text-muted fw-semibold">#45690</span>
                             </div>
                             <!--end::Title-->
@@ -538,7 +538,7 @@
                             <!--end::Symbol-->
                             <!--begin::Title-->
                             <div class="d-flex flex-column">
-                                <a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Landing UI Design" Launch</a>
+                                <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Landing UI Design" Launch</a>
                                 <span class="fs-7 text-muted fw-semibold">#24005</span>
                             </div>
                             <!--end::Title-->

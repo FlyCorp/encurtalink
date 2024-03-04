@@ -423,11 +423,11 @@
           <div class="col-lg-9 col-xl-8 col-xxl-7 text-center">
             <div class="container">
               <div class="row justify-content-center pt-3">
-              <div class="col-lg-12">
-                <textarea name="reason_description" placeholder="Escreva aqui o que motivou dar a nota acima" rows="4" class="form-control textoNps" required>{{$nps->reason_description}}</textarea>
-                <button type="submit" class="btn buttonNps">Enviar agora</button>
+                <div class="col-lg-12">
+                    <textarea name="reason_description" placeholder="Escreva aqui o que motivou dar a nota acima" rows="4" class="form-control textoNps" required>{{$nps->reason_description}}</textarea>
+                    <button type="submit" class="btn buttonNps">Enviar agora</button>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 

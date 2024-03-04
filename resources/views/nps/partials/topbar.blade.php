@@ -33,7 +33,7 @@
         {{-- <!--begin::Actions-->
         <div class="d-flex align-items-center py-2">
             <!--begin::Button-->
-            <a href="dashboard.html#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Nova</a>
+            <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Nova</a>
             <!--end::Button-->
         </div>
         <!--end::Actions--> --}}

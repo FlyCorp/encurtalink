@@ -5,7 +5,7 @@
         <!--begin::Copyright-->
         <div class="text-dark ">
             <span class="text-muted fw-semibold me-1">{{date('Y')}}&copy;</span>
-            <a href="{{route('home')}}" class="text-gray-800 text-hover-primary">Home</a>
+            <a href="{{route('home')}}" class="text-gray-800 text-hover-primary">{{config('app.name')}}</a>
         </div>
         <!--end::Copyright-->
         <!--begin::Menu-->
