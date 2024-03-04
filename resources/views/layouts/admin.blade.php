@@ -71,10 +71,10 @@
 							<!--end::Brand-->
 							<!--begin::Topbar-->
 							<div class="topbar d-flex align-items-stretch">
-								
+
 								<!--begin::Item-->
 								<div class="d-flex align-items-center me-2 me-lg-4">
-									<a href="dashboard.html#" class="btn btn-icon btn-borderless btn-color-white btn-active-primary bg-white bg-opacity-10 position-relative" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+									<a href="#" class="btn btn-icon btn-borderless btn-color-white btn-active-primary bg-white bg-opacity-10 position-relative" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
 										<!--begin::Svg Icon | path: icons/duotune/general/gen007.svg-->
 										<span class="svg-icon svg-icon-1 svg-icon-white">
 											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,13 +96,13 @@
 											<!--begin::Tabs-->
 											<ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-semibold px-9">
 												<li class="nav-item">
-													<a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="dashboard.html#kt_topbar_notifications_1">Alerts</a>
+													<a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_1">Alerts</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link text-white opacity-75 opacity-state-100 pb-4 active" data-bs-toggle="tab" href="dashboard.html#kt_topbar_notifications_2">Updates</a>
+													<a class="nav-link text-white opacity-75 opacity-state-100 pb-4 active" data-bs-toggle="tab" href="#kt_topbar_notifications_2">Updates</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="dashboard.html#kt_topbar_notifications_3">Logs</a>
+													<a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_3">Logs</a>
 												</li>
 											</ul>
 											<!--end::Tabs-->
@@ -134,7 +134,7 @@
 															<!--end::Symbol-->
 															<!--begin::Title-->
 															<div class="mb-0 me-2">
-																<a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Project Alice</a>
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Project Alice</a>
 																<div class="text-gray-400 fs-7">Phase 1 development</div>
 															</div>
 															<!--end::Title-->
@@ -166,7 +166,7 @@
 															<!--end::Symbol-->
 															<!--begin::Title-->
 															<div class="mb-0 me-2">
-																<a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-bold">HR Confidential</a>
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">HR Confidential</a>
 																<div class="text-gray-400 fs-7">Confidential staff documents</div>
 															</div>
 															<!--end::Title-->
@@ -197,7 +197,7 @@
 															<!--end::Symbol-->
 															<!--begin::Title-->
 															<div class="mb-0 me-2">
-																<a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Company HR</a>
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Company HR</a>
 																<div class="text-gray-400 fs-7">Corporeate staff profiles</div>
 															</div>
 															<!--end::Title-->
@@ -230,7 +230,7 @@
 															<!--end::Symbol-->
 															<!--begin::Title-->
 															<div class="mb-0 me-2">
-																<a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Project Redux</a>
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Project Redux</a>
 																<div class="text-gray-400 fs-7">New frontend admin theme</div>
 															</div>
 															<!--end::Title-->
@@ -261,7 +261,7 @@
 															<!--end::Symbol-->
 															<!--begin::Title-->
 															<div class="mb-0 me-2">
-																<a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Project Breafing</a>
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Project Breafing</a>
 																<div class="text-gray-400 fs-7">Product launch status update</div>
 															</div>
 															<!--end::Title-->
@@ -292,7 +292,7 @@
 															<!--end::Symbol-->
 															<!--begin::Title-->
 															<div class="mb-0 me-2">
-																<a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Banner Assets</a>
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Banner Assets</a>
 																<div class="text-gray-400 fs-7">Collection of banner images</div>
 															</div>
 															<!--end::Title-->
@@ -323,7 +323,7 @@
 															<!--end::Symbol-->
 															<!--begin::Title-->
 															<div class="mb-0 me-2">
-																<a href="dashboard.html#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Icon Assets</a>
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Icon Assets</a>
 																<div class="text-gray-400 fs-7">Collection of SVG icons</div>
 															</div>
 															<!--end::Title-->
@@ -365,7 +365,7 @@
 														<!--end::Text-->
 														<!--begin::Action-->
 														<div class="text-center mt-5 mb-9">
-															<a href="dashboard.html#" class="btn btn-sm btn-primary px-6" data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">Upgrade</a>
+															<a href="#" class="btn btn-sm btn-primary px-6" data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">Upgrade</a>
 														</div>
 														<!--end::Action-->
 													</div>
@@ -391,7 +391,7 @@
 															<span class="w-70px badge badge-light-success me-4">200 OK</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">New order</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">New order</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -408,7 +408,7 @@
 															<span class="w-70px badge badge-light-danger me-4">500 ERR</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">New customer</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">New customer</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -425,7 +425,7 @@
 															<span class="w-70px badge badge-light-success me-4">200 OK</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">Payment process</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Payment process</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -442,7 +442,7 @@
 															<span class="w-70px badge badge-light-warning me-4">300 WRN</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">Search query</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Search query</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -459,7 +459,7 @@
 															<span class="w-70px badge badge-light-success me-4">200 OK</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">API connection</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">API connection</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -476,7 +476,7 @@
 															<span class="w-70px badge badge-light-success me-4">200 OK</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">Database restore</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Database restore</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -493,7 +493,7 @@
 															<span class="w-70px badge badge-light-warning me-4">300 WRN</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">System update</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">System update</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -510,7 +510,7 @@
 															<span class="w-70px badge badge-light-warning me-4">300 WRN</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">Server OS update</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Server OS update</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -527,7 +527,7 @@
 															<span class="w-70px badge badge-light-warning me-4">300 WRN</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">API rollback</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">API rollback</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -544,7 +544,7 @@
 															<span class="w-70px badge badge-light-danger me-4">500 ERR</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">Refund process</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Refund process</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -561,7 +561,7 @@
 															<span class="w-70px badge badge-light-danger me-4">500 ERR</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">Withdrawal process</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Withdrawal process</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -578,7 +578,7 @@
 															<span class="w-70px badge badge-light-danger me-4">500 ERR</span>
 															<!--end::Code-->
 															<!--begin::Title-->
-															<a href="dashboard.html#" class="text-gray-800 text-hover-primary fw-semibold">Mail tasks</a>
+															<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Mail tasks</a>
 															<!--end::Title-->
 														</div>
 														<!--end::Section-->
@@ -613,7 +613,7 @@
 								<!--begin::Theme mode-->
 								<div class="d-flex align-items-center me-2 me-lg-4">
 									<!--begin::Menu toggle-->
-									<a href="dashboard.html#" class="btn btn-icon btn-borderless btn-color-white btn-active-primary bg-white bg-opacity-10" data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+									<a href="#" class="btn btn-icon btn-borderless btn-color-white btn-active-primary bg-white bg-opacity-10" data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
 										<!--begin::Svg Icon | path: icons/duotune/general/gen060.svg-->
 										<span class="svg-icon theme-light-show svg-icon-2">
 											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -645,7 +645,7 @@
 									<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-700 menu-icon-muted menu-active-bg menu-state-color fw-semibold py-4 fs-base w-175px" data-kt-menu="true" data-kt-element="theme-mode-menu">
 										<!--begin::Menu item-->
 										<div class="menu-item px-3 my-0">
-											<a href="dashboard.html#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="light">
+											<a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="light">
 												<span class="menu-icon" data-kt-element="icon">
 													<!--begin::Svg Icon | path: icons/duotune/general/gen060.svg-->
 													<span class="svg-icon svg-icon-3">
@@ -669,7 +669,7 @@
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-3 my-0">
-											<a href="dashboard.html#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="dark">
+											<a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="dark">
 												<span class="menu-icon" data-kt-element="icon">
 													<!--begin::Svg Icon | path: icons/duotune/general/gen061.svg-->
 													<span class="svg-icon svg-icon-3">
@@ -688,7 +688,7 @@
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-3 my-0">
-											<a href="dashboard.html#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="system">
+											<a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="system">
 												<span class="menu-icon" data-kt-element="icon">
 													<!--begin::Svg Icon | path: icons/duotune/general/gen062.svg-->
 													<span class="svg-icon svg-icon-3">
@@ -706,7 +706,7 @@
 									<!--end::Menu-->
 								</div>
 								<!--end::Theme mode-->
-								
+
 							</div>
 							<!--end::Topbar-->
 						</div>
@@ -942,7 +942,7 @@
 									<!--begin::Timeline heading-->
 									<div class="mb-5 pe-3">
 										<!--begin::Title-->
-										<a href="dashboard.html#" class="fs-5 fw-semibold text-gray-800 text-hover-primary mb-2">3 New Incoming Project Files:</a>
+										<a href="#" class="fs-5 fw-semibold text-gray-800 text-hover-primary mb-2">3 New Incoming Project Files:</a>
 										<!--end::Title-->
 										<!--begin::Description-->
 										<div class="d-flex align-items-center mt-1 fs-6">
@@ -986,7 +986,7 @@
 												<!--begin::Info-->
 												<div class="ms-1 fw-semibold">
 													<!--begin::Desc-->
-													<a href="dashboard.html#" class="fs-6 text-hover-primary fw-bold">Client UAT Testing Results</a>
+													<a href="#" class="fs-6 text-hover-primary fw-bold">Client UAT Testing Results</a>
 													<!--end::Desc-->
 													<!--begin::Number-->
 													<div class="text-gray-400">18kb</div>
@@ -1003,7 +1003,7 @@
 												<!--begin::Info-->
 												<div class="ms-1 fw-semibold">
 													<!--begin::Desc-->
-													<a href="dashboard.html#" class="fs-6 text-hover-primary fw-bold">Finance Reports</a>
+													<a href="#" class="fs-6 text-hover-primary fw-bold">Finance Reports</a>
 													<!--end::Desc-->
 													<!--begin::Number-->
 													<div class="text-gray-400">20mb</div>
@@ -1044,8 +1044,8 @@
 									<div class="pe-3 mb-5">
 										<!--begin::Title-->
 										<div class="fs-5 fw-semibold mb-2">Task
-										<a href="dashboard.html#" class="text-primary fw-bold me-1">#45890</a>merged with
-										<a href="dashboard.html#" class="text-primary fw-bold me-1">#45890</a>in “Ads Pro Admin Dashboard project:</div>
+										<a href="#" class="text-primary fw-bold me-1">#45890</a>merged with
+										<a href="#" class="text-primary fw-bold me-1">#45890</a>in “Ads Pro Admin Dashboard project:</div>
 										<!--end::Title-->
 										<!--begin::Description-->
 										<div class="d-flex align-items-center mt-1 fs-6">
@@ -1117,7 +1117,7 @@
 												<!--end::Image-->
 												<!--begin::Link-->
 												<div class="overlay-layer bg-dark bg-opacity-10 rounded">
-													<a href="dashboard.html#" class="btn btn-sm btn-primary btn-shadow">Explore</a>
+													<a href="#" class="btn btn-sm btn-primary btn-shadow">Explore</a>
 												</div>
 												<!--end::Link-->
 											</div>
@@ -1131,7 +1131,7 @@
 												<!--end::Image-->
 												<!--begin::Link-->
 												<div class="overlay-layer bg-dark bg-opacity-10 rounded">
-													<a href="dashboard.html#" class="btn btn-sm btn-primary btn-shadow">Explore</a>
+													<a href="#" class="btn btn-sm btn-primary btn-shadow">Explore</a>
 												</div>
 												<!--end::Link-->
 											</div>
@@ -1145,7 +1145,7 @@
 												<!--end::Image-->
 												<!--begin::Link-->
 												<div class="overlay-layer bg-dark bg-opacity-10 rounded">
-													<a href="dashboard.html#" class="btn btn-sm btn-primary btn-shadow">Explore</a>
+													<a href="#" class="btn btn-sm btn-primary btn-shadow">Explore</a>
 												</div>
 												<!--end::Link-->
 											</div>
@@ -1182,7 +1182,7 @@
 									<div class="pe-3 mb-5">
 										<!--begin::Title-->
 										<div class="fs-5 fw-semibold mb-2">New case
-										<a href="dashboard.html#" class="text-primary fw-bold me-1">#67890</a>is assigned to you in Multi-platform Database Design project</div>
+										<a href="#" class="text-primary fw-bold me-1">#67890</a>is assigned to you in Multi-platform Database Design project</div>
 										<!--end::Title-->
 										<!--begin::Description-->
 										<div class="overflow-auto pb-5">
@@ -1192,7 +1192,7 @@
 												<div class="text-muted me-2 fs-7">Added at 4:23 PM by</div>
 												<!--end::Info-->
 												<!--begin::User-->
-												<a href="dashboard.html#" class="text-primary fw-bold me-1">Alice Tan</a>
+												<a href="#" class="text-primary fw-bold me-1">Alice Tan</a>
 												<!--end::User-->
 											</div>
 											<!--end::Wrapper-->
@@ -1267,7 +1267,7 @@
 												</div>
 												<!--end::Content-->
 												<!--begin::Action-->
-												<a href="dashboard.html#" class="btn btn-primary px-6 align-self-center text-nowrap">Proceed</a>
+												<a href="#" class="btn btn-primary px-6 align-self-center text-nowrap">Proceed</a>
 												<!--end::Action-->
 											</div>
 											<!--end::Wrapper-->
@@ -1305,7 +1305,7 @@
 									<div class="pe-3 mb-5">
 										<!--begin::Title-->
 										<div class="fs-5 fw-semibold mb-2">New order
-										<a href="dashboard.html#" class="text-primary fw-bold me-1">#67890</a>is placed for Workshow Planning & Budget Estimation</div>
+										<a href="#" class="text-primary fw-bold me-1">#67890</a>is placed for Workshow Planning & Budget Estimation</div>
 										<!--end::Title-->
 										<!--begin::Description-->
 										<div class="d-flex align-items-center mt-1 fs-6">
@@ -1313,7 +1313,7 @@
 											<div class="text-muted me-2 fs-7">Placed at 4:23 PM by</div>
 											<!--end::Info-->
 											<!--begin::User-->
-											<a href="dashboard.html#" class="text-primary fw-bold me-1">Jimmy Bold</a>
+											<a href="#" class="text-primary fw-bold me-1">Jimmy Bold</a>
 											<!--end::User-->
 										</div>
 										<!--end::Description-->
@@ -1355,7 +1355,7 @@
 					<div class="card-title">
 						<!--begin::User-->
 						<div class="d-flex justify-content-center flex-column me-3">
-							<a href="dashboard.html#" class="fs-4 fw-bold text-gray-900 text-hover-primary me-1 mb-2 lh-1">Brian Cox</a>
+							<a href="#" class="fs-4 fw-bold text-gray-900 text-hover-primary me-1 mb-2 lh-1">Brian Cox</a>
 							<!--begin::Info-->
 							<div class="mb-0 lh-1">
 								<span class="badge badge-success badge-circle w-10px h-10px me-1"></span>
@@ -1382,18 +1382,18 @@
 								<!--end::Heading-->
 								<!--begin::Menu item-->
 								<div class="menu-item px-3">
-									<a href="dashboard.html#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_users_search">Add Contact</a>
+									<a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_users_search">Add Contact</a>
 								</div>
 								<!--end::Menu item-->
 								<!--begin::Menu item-->
 								<div class="menu-item px-3">
-									<a href="dashboard.html#" class="menu-link flex-stack px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">Invite Contacts
+									<a href="#" class="menu-link flex-stack px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">Invite Contacts
 									<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Specify a contact email to send an invitation"></i></a>
 								</div>
 								<!--end::Menu item-->
 								<!--begin::Menu item-->
 								<div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
-									<a href="dashboard.html#" class="menu-link px-3">
+									<a href="#" class="menu-link px-3">
 										<span class="menu-title">Groups</span>
 										<span class="menu-arrow"></span>
 									</a>
@@ -1401,17 +1401,17 @@
 									<div class="menu-sub menu-sub-dropdown w-175px py-4">
 										<!--begin::Menu item-->
 										<div class="menu-item px-3">
-											<a href="dashboard.html#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Create Group</a>
+											<a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Create Group</a>
 										</div>
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-3">
-											<a href="dashboard.html#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Invite Members</a>
+											<a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Invite Members</a>
 										</div>
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-3">
-											<a href="dashboard.html#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Settings</a>
+											<a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Settings</a>
 										</div>
 										<!--end::Menu item-->
 									</div>
@@ -1420,7 +1420,7 @@
 								<!--end::Menu item-->
 								<!--begin::Menu item-->
 								<div class="menu-item px-3 my-1">
-									<a href="dashboard.html#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Settings</a>
+									<a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Settings</a>
 								</div>
 								<!--end::Menu item-->
 							</div>
@@ -1460,7 +1460,7 @@
 									<!--end::Avatar-->
 									<!--begin::Details-->
 									<div class="ms-3">
-										<a href="dashboard.html#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
+										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
 										<span class="text-muted fs-7 mb-1">2 mins</span>
 									</div>
 									<!--end::Details-->
@@ -1482,7 +1482,7 @@
 									<!--begin::Details-->
 									<div class="me-3">
 										<span class="text-muted fs-7 mb-1">5 mins</span>
-										<a href="dashboard.html#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
+										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
 									</div>
 									<!--end::Details-->
 									<!--begin::Avatar-->
@@ -1512,7 +1512,7 @@
 									<!--end::Avatar-->
 									<!--begin::Details-->
 									<div class="ms-3">
-										<a href="dashboard.html#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
+										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
 										<span class="text-muted fs-7 mb-1">1 Hour</span>
 									</div>
 									<!--end::Details-->
@@ -1534,7 +1534,7 @@
 									<!--begin::Details-->
 									<div class="me-3">
 										<span class="text-muted fs-7 mb-1">2 Hours</span>
-										<a href="dashboard.html#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
+										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
 									</div>
 									<!--end::Details-->
 									<!--begin::Avatar-->
@@ -1564,7 +1564,7 @@
 									<!--end::Avatar-->
 									<!--begin::Details-->
 									<div class="ms-3">
-										<a href="dashboard.html#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
+										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
 										<span class="text-muted fs-7 mb-1">3 Hours</span>
 									</div>
 									<!--end::Details-->
@@ -1587,7 +1587,7 @@
 									<!--begin::Details-->
 									<div class="me-3">
 										<span class="text-muted fs-7 mb-1">4 Hours</span>
-										<a href="dashboard.html#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
+										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
 									</div>
 									<!--end::Details-->
 									<!--begin::Avatar-->
@@ -1617,7 +1617,7 @@
 									<!--end::Avatar-->
 									<!--begin::Details-->
 									<div class="ms-3">
-										<a href="dashboard.html#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
+										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
 										<span class="text-muted fs-7 mb-1">5 Hours</span>
 									</div>
 									<!--end::Details-->
@@ -1639,7 +1639,7 @@
 									<!--begin::Details-->
 									<div class="me-3">
 										<span class="text-muted fs-7 mb-1">Just now</span>
-										<a href="dashboard.html#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
+										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">You</a>
 									</div>
 									<!--end::Details-->
 									<!--begin::Avatar-->
@@ -1669,7 +1669,7 @@
 									<!--end::Avatar-->
 									<!--begin::Details-->
 									<div class="ms-3">
-										<a href="dashboard.html#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
+										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">Brian Cox</a>
 										<span class="text-muted fs-7 mb-1">Just now</span>
 									</div>
 									<!--end::Details-->

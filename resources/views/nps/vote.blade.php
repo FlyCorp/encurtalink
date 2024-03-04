@@ -2,9 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <style>
       * {
         margin: 0;
@@ -77,44 +86,53 @@
       label:focus,
       .btn:active {
         outline: none !important;
-        -webkit-appearance: none;
         box-shadow: none !important;
       }
 
-      .form-floating>.form-control:focus~label,
-      .form-floating>.form-control:not(:placeholder-shown)~label,
-      .form-floating>.form-select~label {
+      .form-floating > .form-control:focus ~ label,
+      .form-floating > .form-control:not(:placeholder-shown) ~ label,
+      .form-floating > .form-select ~ label {
         transform: scale(0.85) translateY(-0.75rem) translateX(0.15rem);
       }
 
-      .form-floating>label {
+      .form-floating > label {
         padding: 1rem 1.75rem;
       }
 
       @media (max-width: 575.98px) {
-
         .container,
         .container-fluid {
-          width: 90vw;
+          width: 95vw;
         }
       }
 
       @media (min-width: 576px) and (max-width: 767.98px) {
-
         .container,
         .container-sm {
           max-width: none;
-          width: 90vw;
+          width: 95vw;
         }
       }
 
       /* CONSUMIDOR */
       section.nps {
-        min-height: 100vh;
+        min-height: 50vh;
         background: url("/assets/media/nps/bg.png") no-repeat;
         background-size: cover;
-        background-position-y: 0%;
         background-position-x: center;
+        background-position-y: top;
+        overflow: hidden;
+        position: relative;
+      }
+
+      section.nps-footer {
+        height: 60vh;
+        background: url("/assets/media/nps/bg-footer.png") no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: top;
+        overflow: hidden;
+        position: relative;
       }
 
       section.nps h2 {
@@ -148,6 +166,41 @@
         align-items: center;
         justify-content: center;
         transition: 0.3s;
+      }
+
+      @media (max-width: 1199.98px) {
+
+        section.nps {
+          min-height: 70vh;
+          background-position-x: center;
+          background-position-y: top;
+        }
+
+        section.nps-footer {
+          height: 30vh;
+          background-position-x: right;
+          background-position-y: top;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+
+        section.nps {
+          min-height: 70vh;
+          background-position-x: center;
+          background-position-y: top;
+        }
+
+        section.nps-footer {
+          height: 30vh;
+          background-position-x: right;
+          background-position-y: top;
+        }
+
+        section.nps .voteNps .voto-list-item {
+          height: 65px;
+          font-size: 20px;
+        }
       }
 
       section.nps .voteNps .voto-list-item:nth-child(1) {
@@ -201,12 +254,21 @@
       }
 
       @media (max-width: 767.98px) {
+
         section.nps {
-          background-position-y: -50% !important;
+          min-height: 70vh;
+          background-position-x: center;
+          background-position-y: top;
+        }
+
+        section.nps-footer {
+          height: 30vh;
+          background-position-x: right;
+          background-position-y: top;
         }
 
         section.nps h2 {
-          font-size: 1.25rem;
+          font-size: 1.4rem;
         }
 
         section.nps h3 {
@@ -214,14 +276,70 @@
         }
 
         section.nps .voteNps .voto-list-item {
-          height: 50px;
+          height: 55px;
+          font-size: 18px;
           margin: 0 0 0 1px;
         }
       }
 
-      section.nps .link-social {
+      .img-logo {
+        height: 120px;
+      }
+
+      .img-footer {
+        height: 90px;
+      }
+
+      .padding-bottom {
+        padding-bottom: 80px;
+      }
+
+      @media (max-width: 575.98px) {
+
+        section.nps {
+          min-height: 65vh;
+          background-position-x: center;
+          background-position-y: top;
+           padding-top: 50px;
+        }
+
+        section.nps-footer {
+          height: 35vh;
+          background-position-x: right;
+          background-position-y: top;
+        }
+
+        section.nps .voteNps .voto-list-item {
+          height: 40px;
+          font-size: 16px;
+        }
+
+        .padding-bottom {
+          padding-bottom: 40px;
+        }
+
+        .img-logo {
+          height: 90px;
+        }
+
+        .img-footer {
+          height: 70px;
+        }
+      }
+
+      section.nps-footer .link-social {
         padding: 0 0.5rem;
-        color: #fff;
+        color: #ffffff;
+      }
+
+      section.nps-footer .link-social i {
+        font-size: 2em;
+      }
+
+      @media (max-width: 575.98px) {
+        section.nps-footer .link-social i {
+          font-size: 1.5em;
+        }
       }
 
       section.nps .form-control {
@@ -253,57 +371,62 @@
   </head>
   <body>
     <section class="nps">
-      <div class="container">
+      <div class="container position-relative z-3">
         <div class="row pt-5 pb-4">
           <div class="col-12 text-center">
-            <img src="{{asset('assets/media/nps/logo.png')}}" alt="" height="120" class="img-fluid">
+            <img
+              src="{{asset(config('nps.path') . '/logo.png')}}"
+              alt=""
+              class="img-fluid img-logo"
+            />
           </div>
         </div>
         <div class="row pt-4 pt-md-5 justify-content-center">
           <div class="col-lg-9 col-xl-8 col-xxl-7 text-center">
-            <h2>Em uma escala de 0 a 10, qual a probabilidade de você recomendar nossos produtos?</h2>
+            <h2>
+              Em uma escala de 0 a 10, qual a probabilidade de você recomendar
+              nossos produtos para amigos e familiares?
+            </h2>
           </div>
         </div>
-        <div class="row pt-4 pb-4 pb-md-5">
+        <div class="row pt-5 pb-4 pb-md-4">
           <div class="col-12 voteNps">
-             @for ($i = 0; $i <= 10; $i++)
+            @for ($i = 0; $i <= 10; $i++)
              <a href="{{route('nps.vote', [$nps->uuid, $i])}}" class="voto-list-item">{{$i}}</a>
              @endfor
           </div>
         </div>
         <div class="row pt-4 pt-md-5 pb-5 pb-lg-0 justify-content-center">
-          <div class="col-10 col-sm-8 col-md-7 col-lg-5 col-xl-4 text-center" style="padding-bottom: 100px;">
-            <img src="{{asset('assets/media/nps/title.png')}}" alt="" class="img-fluid">
+          <div class="col-10 col-sm-8 col-md-7 col-lg-5 col-xl-4 text-center padding-bottom">
+            <img src="{{asset(config('nps.path') . '/title.png')}}" alt="" class="img-fluid" />
           </div>
         </div>
-        <div class="row pb-5">
-          <div class="col-12 text-center">
-            <img src="{{asset('assets/media/nps/produtos.png')}}" alt="" class="img-fluid">
-          </div>
-        </div>
-        <div class="row pb-5">
-          <div class="col-12 text-center">
-            <img src="{{asset('assets/media/nps/footer.png')}}" alt="" class="img-fluid">
-          </div>
-          <div class="col-12 pt-2 text-center">
-            <a href="#" class="link-social">
-              <i class="fab fa-2x fa-whatsapp"></i>
-            </a>
-            <a href="#" class="link-social">
-              <i class="fab fa-2x fa-facebook-f"></i>
-            </a>
-            <a href="#" class="link-social">
-              <i class="fab fa-2x fa-instagram"></i>
-            </a>
-            <a href="#" class="link-social">
-              <i class="fab fa-2x fa-linkedin-in"></i>
-            </a>
-            <a href="#" class="link-social">
-              <i class="fab fa-2x fa-youtube"></i>
-            </a>
-            <a href="#" class="link-social">
-              <i class="fab fa-2x fa-twitter"></i>
-            </a>
+      </div>
+    </section>
+    <section class="nps-footer">
+      <div class="container h-100">
+        <div class="row align-items-end h-100 pb-3">
+          <div>
+            <div class="col-12 text-center">
+              <img src="{{asset(config('nps.path') . '/footer.png')}}" alt="" class="img-footer"/>
+            </div>
+            <div class="col-12 pt-2 text-center">
+              <a href="{{config('nps.socials.whatsapp')}}" class="link-social">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="{{config('nps.socials.facebook')}}" class="link-social">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="{{config('nps.socials.instagram')}}" class="link-social">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="{{config('nps.socials.linkedin')}}" class="link-social">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="{{config('nps.socials.youtube')}}" class="link-social">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
