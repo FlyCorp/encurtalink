@@ -411,23 +411,20 @@
               <img src="{{asset(config('nps.path') . '/footer.png')}}" alt="" class="img-footer"/>
             </div>
             <div class="col-12 pt-2 text-center">
-              <a href="#" class="link-social">
+              <a href="{{config('nps.socials.whatsapp')}}" class="link-social">
                 <i class="fab fa-whatsapp"></i>
               </a>
-              <a href="#" class="link-social">
+              <a href="{{config('nps.socials.facebook')}}" class="link-social">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="link-social">
+              <a href="{{config('nps.socials.instagram')}}" class="link-social">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="#" class="link-social">
+              <a href="{{config('nps.socials.linkedin')}}" class="link-social">
                 <i class="fab fa-linkedin-in"></i>
               </a>
-              <a href="#" class="link-social">
+              <a href="{{config('nps.socials.youtube')}}" class="link-social">
                 <i class="fab fa-youtube"></i>
-              </a>
-              <a href="#" class="link-social">
-                <i class="fab fa-twitter"></i>
               </a>
             </div>
           </div>
