@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class NpsLink extends Model
 {
+
     protected $table      = 'nps_links';
     protected $primaryKey = 'id';
 
@@ -28,11 +29,11 @@ class NpsLink extends Model
             $nps->save();
         });
 
-        static::updating(function(NpsLink $nps){
+        static::updated(function(NpsLink $nps){
             // Obtenha os valores originais
             $old = $nps->getOriginal();
 
-            if($nps->vote && ($old["vote"] != $nps->vote)){
+            if ($nps->vote && isset($old) && array_key_exists("vote", $old) && ($old["vote"] != $nps->vote)){
                 $nps->voted_at = now()->format("Y-m-d H:i");
             }
         });

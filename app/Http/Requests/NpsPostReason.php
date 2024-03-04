@@ -22,7 +22,7 @@ class NpsPostReason extends FormRequest
     {
         return [
             'reason_channel'     => [
-                'required',
+                'nullable',
                 Rule::in(['atendimento', 'entrega', 'qualidade', 'outros']),
             ],
             'reason_description' => 'nullable|string',
