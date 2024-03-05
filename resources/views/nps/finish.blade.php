@@ -399,7 +399,7 @@
         <div class="row pt-4 pt-md-5 justify-content-center">
           <div class="col-lg-9 col-xl-8 col-xxl-7 text-center">
             <h2>Muito obrigado pelo seu voto!</h2>
-              <h3>Agora gostaríamos de saber qual seguimento e o motivo pelo qual você nos deu essa nota.​</h3>
+              <h3>Agora gostaríamos de saber qual o motivo pelo qual você nos deu essa nota.​</h3>
           </div>
         </div>
         <div class="row justify-content-center pt-3">
