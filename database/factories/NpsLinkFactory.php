@@ -19,7 +19,7 @@ $factory->define(App\NpsLink::class, function (Faker $faker) {
         'order_date' => $this->faker->dateTimeBetween(now()->subYear(1), now())->format('Y-m-d H:i:s'),
         'config_process_in' => $this->faker->date(),
         'config_gateway' => 'TakeBlip',
-	'config_number' => preg_replace('/[^0-9]/', '', $this->faker->unique()->phoneNumber()),
+	    'config_number' => preg_replace('/[^0-9]/', '', $this->faker->unique()->phoneNumber()),
         'vote' => $this->faker->randomNumber(1, 10),
         'voted_at' => $this->faker->dateTimeBetween(now()->subMonth(3), now())->format('Y-m-d H:i:s'),
     ];
