@@ -28,15 +28,6 @@ class NpsLink extends Model
             $nps->uuid = crc32($nps->id);
             $nps->save();
         });
-
-        static::updated(function(NpsLink $nps){
-            // Obtenha os valores originais
-            $old = $nps->getOriginal();
-
-            if ($nps->vote && isset($old) && array_key_exists("vote", $old) && ($old["vote"] != $nps->vote)){
-                $nps->voted_at = now()->format("Y-m-d H:i");
-            }
-        });
     }
 
     public function scopeSearch($query, $term)

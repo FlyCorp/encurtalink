@@ -74,7 +74,14 @@ class NpsController extends Controller
     public function vote(UUIDRequest $form, $uuid, $vote)
     {
         $nps = $this->npsLink->where("uuid", $uuid)->first();
-        $nps->vote = $vote;
+
+        $old = $nps->getOriginal();
+
+        if(!isset($old) || ($old["vote"] != (int)$vote)){
+            $nps->voted_at = now()->format("Y-m-d H:i");
+            $nps->vote = $vote;
+        }
+
         $nps->save();
 
         return view("nps.finish", compact('nps'));
