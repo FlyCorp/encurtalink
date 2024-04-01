@@ -47,7 +47,11 @@
                   <input type="text" class="form-control" name="code" id="basic-url" aria-describedby="basic-addon3" value="{{old('code',$shortUrl->code)}}">
                   <input type="hidden" name="code_original">
                 </div>
-                <div class="fv-plugins-message-container invalid-feedback"></div>
+                @error('code')
+                <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                    <div data-field="event_name" data-validator="notEmpty">{{$errors->first('code')}}</div>
+                </div>
+                @enderror
               </div>
               <!--end::Input group-->
               <!--begin::Input group-->
