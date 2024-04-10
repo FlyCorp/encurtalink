@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 }); */
 
 Route::group(['middleware' => 'api', 'prefix' => 'nps'], function () {
-    Route::post('/receive', 'Api\NpsApiController@receive')->name('nps.receive');
+    Route::post('/receive', 'Api\NpsApiController@receive')->name('nps.receive')
+    ->withoutMiddleware('throttle');
 });
 

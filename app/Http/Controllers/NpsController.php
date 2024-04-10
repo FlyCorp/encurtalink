@@ -74,7 +74,14 @@ class NpsController extends Controller
     public function vote(UUIDRequest $form, $uuid, $vote)
     {
         $nps = $this->npsLink->where("uuid", $uuid)->first();
-        $nps->vote = $vote;
+
+        $old = $nps->getOriginal();
+
+        if(!isset($old) || ($old["vote"] != (int)$vote)){
+            $nps->voted_at = now()->format("Y-m-d H:i");
+            $nps->vote = $vote;
+        }
+
         $nps->save();
 
         return view("nps.finish", compact('nps'));
@@ -85,7 +92,7 @@ class NpsController extends Controller
         $nps = $this->npsLink->where("uuid", $uuid)->first();
         $nps->vote = $vote;
         //$nps->reason_channel = $request->validated()['reason_channel'];
-        //$nps->reason_description = $request->validated()['reason_description'];
+        $nps->reason_description = $request->validated()['reason_description'];
         $nps->save();
 
         return redirect()->route("nps.feedback");

@@ -13,11 +13,12 @@ class PostUpdateShortUrl extends FormRequest
     }
 
     public function rules()
-    {   
-        
+    {
+
         return
             [
                 'link'        => 'required|url',
+                'code'        => 'required|unique:short_urls,code,' . request()->id,
                 'description' => 'required',
             ];
     }
@@ -27,13 +28,12 @@ class PostUpdateShortUrl extends FormRequest
         return [
             'id.required'                     => 'O id é obrigatório',
             'id.exists'                       => 'Link inexistente',
-            'code.required'                   => 'destino inexistente',
-            'code.unique'                     => 'destino duplicado',
+            'code.required'                   => 'Código inexistente',
+            'code.unique'                     => 'Código duplicado',
             'link.required'                   => 'O link é obrigatório',
             'link.url'                        => 'O link é inválido',
-            //'link.unique'                     => 'Link duplicado',
             'description.required'            => 'A descrição é obrigatória',
-            
+
         ];
     }
 

@@ -379,7 +379,7 @@
         </div>
         <div class="row pt-4 pt-md-5 justify-content-center pb-2">
           <div class="col-lg-9 col-xl-8 col-xxl-7 text-center">
-            <h2>Muito obrigado pelo seu voto, continuaremos empenhados em oferecer qualidade e excelência com base nos feedbacks recebidos.</h2>
+            <h2>Muito obrigado, continuaremos empenhados em oferecer qualidade e excelência com base nos feedbacks recebidos.</h2>
           </div>
         </div>
         <div class="row pt-4 pt-md-5 pb-5 pb-lg-0 justify-content-center">
