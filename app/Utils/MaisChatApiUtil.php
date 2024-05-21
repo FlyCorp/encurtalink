@@ -52,7 +52,7 @@ class MaisChatApiUtil
         return json_decode($response->getBody(), true);
     }
 
-    public function sendTemplateMetaClound(array $data, string $broker = "wppCloudAPI")
+    public function sendTemplateMetaCloud(array $data, string $broker = "wppCloudAPI")
     {
             //code...
             $json = sprintf('{
@@ -63,57 +63,17 @@ class MaisChatApiUtil
                     "destination": "%s",
                     "token": "EAASYWLJqc1YBO1jOZB26n6StKhcZCKCkAYm2GUbEKnaUsVLgvd5ftcx7NK6IEwYX3ESZAyK1IbaKZAHGoOdiviYMxnScJOXiydIbKbbO9O8ENPsb8bn0w6Y3FLsAn2Di6tXxNhOPEngiHrqxCcOkJp8P864J7r7E4G5LR6VZAb1sZBunZBwXcqDBdJ4e8l3mgyIbxBvhwZBckuZA7AF7z",
                     "template": {
-                        "name": "integracao_receita_support_v3",
+                        "name": "nps_360v2",
                         "language": "pt_BR",
                         "components": [
                             {
-                                "type": "header",
-                                "parameters": [
-                                    {
-                                        "type": "document",
-                                        "document": {
-                                            "link": "%s",
-                                            "filename": "Receituário"
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "body",
-                                "parameters": [
-                                    {
-                                        "type": "text",
-                                        "text": "%s"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "%s"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "%s"
-                                    }
-                                ]
-                            },
-                            {
                                 "type": "BUTTON",
-                                "sub_type": "quick_reply",
+                                "sub_type": "url",
                                 "index": "0",
                                 "parameters": [
                                     {
                                         "type": "text",
-                                        "text": "Sim"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "BUTTON",
-                                "sub_type": "quick_reply",
-                                "index": "1",
-                                "parameters": [
-                                    {
-                                        "type": "text",
-                                        "text": "Não"
+                                        "text": "12345"
                                     }
                                 ]
                             }
