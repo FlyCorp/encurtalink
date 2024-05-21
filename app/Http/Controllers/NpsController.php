@@ -57,8 +57,8 @@ class NpsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($uuid)
-    {dd(urldecode(preg_replace('/\{[^}]*\}/', '', $uuid)));
-        $nps = $this->npsLink->where("uuid", urldecode(preg_replace('/\{[^}]*\}/', '', $uuid)))->first();
+    {dd(urldecode(preg_replace('/\{.*?\}/', '', $uuid)));
+        $nps = $this->npsLink->where("uuid", urldecode(preg_replace('/\{.*?\}/', '', $uuid)))->first();
 
         if($nps){
 
@@ -73,7 +73,7 @@ class NpsController extends Controller
 
     public function vote(UUIDRequest $form, $uuid, $vote)
     {
-        $nps = $this->npsLink->where("uuid", urldecode(preg_replace('/\{[^}]*\}/', '', $uuid)))->first();
+        $nps = $this->npsLink->where("uuid", urldecode(preg_replace('/\{.*?\}/', '', $uuid)))->first();
 
         $old = $nps->getOriginal();
 
@@ -89,7 +89,7 @@ class NpsController extends Controller
 
     public function reason(NpsPostReason $request, $uuid, $vote)
     {
-        $nps = $this->npsLink->where("uuid", urldecode(preg_replace('/\{[^}]*\}/', '', $uuid)))->first();
+        $nps = $this->npsLink->where("uuid", urldecode(preg_replace('/\{.*?\}/', '', $uuid)))->first();
         $nps->vote = $vote;
         //$nps->reason_channel = $request->validated()['reason_channel'];
         $nps->reason_description = $request->validated()['reason_description'];
