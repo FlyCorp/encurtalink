@@ -39,6 +39,7 @@ class MaisChatWhatsappSendMessageJob implements ShouldQueue
 
         $response = $maisChatApiUtil
         ->sendTemplateMetaCloud([
+            "uuid"              => $this->nps->uuid,
             "pacient_whatsapp"  => $this->nps->config_number,
             "prescriber_url"    => route("nps.show", ["uuid" => $this->nps->uuid]),
             "pacient_name"      => $this->nps->client_name,

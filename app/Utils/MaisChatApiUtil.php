@@ -54,7 +54,6 @@ class MaisChatApiUtil
 
     public function sendTemplateMetaCloud(array $data, string $broker = "wppCloudAPI")
     {
-            //code...
             $json = sprintf('{
                     "type": "apiTemplate",
                     "broker": "wppCloudAPI",
@@ -73,7 +72,7 @@ class MaisChatApiUtil
                                 "parameters": [
                                     {
                                         "type": "text",
-                                        "text": "12345"
+                                        "text": %s
                                     }
                                 ]
                             }
@@ -81,10 +80,7 @@ class MaisChatApiUtil
                     }
                 }',
                 $data['pacient_whatsapp'],
-                !empty($data['prescriber_url']) ? $data['prescriber_url'] : "",
-                $data['pacient_name'],
-                $data['prescriber_name'],
-                $data['prescription']
+                $data['uuid'],
             );
 
             $params = [
