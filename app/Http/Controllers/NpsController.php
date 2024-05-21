@@ -57,7 +57,7 @@ class NpsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($uuid)
-    {
+    {dd(urldecode(preg_replace('/\{[^}]*\}/', '', $uuid)));
         $nps = $this->npsLink->where("uuid", urldecode(preg_replace('/\{[^}]*\}/', '', $uuid)))->first();
 
         if($nps){
