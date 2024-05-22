@@ -71,6 +71,10 @@ class NpsApiReceive extends FormRequest
                 'required',
                 Rule::in(['MaisChat', 'OctaDesk', 'TakeBlip']),
             ],
+            'Gateway_channel' => [
+                'required_if:Config_gateway,MaisChat',
+                Rule::in(['Estereis', 'Nao estereis']),
+            ],
             'Config_number' => [
                 'required',
                 'numeric',
@@ -100,6 +104,8 @@ class NpsApiReceive extends FormRequest
             'Config_process-in.date_format' => 'O formato da data de processamento deve ser Y-m-d H:i',
             'Config_gateway.required' => 'O gateway de disparo é obrigatório',
             'Config_gateway.in' => 'O valor do gateway de disparo deve ser "MaisChat", "OctaDesk" ou "TakeBlip"',
+            'Gateway_channel.required_if' => 'O canal de gateway é obrigatório quando o gateway é "MaisChat"',
+            'Gateway_channel.in' => 'O canal de gateway deve ser Estereis ou Nao estereis',
             'Config_number.required' => 'O telefone do destinatário é obrigatório',
             'Config_number.numeric' => 'O telefone deve conter apenas números',
         ];

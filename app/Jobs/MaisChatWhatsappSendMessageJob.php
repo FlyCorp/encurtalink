@@ -35,7 +35,7 @@ class MaisChatWhatsappSendMessageJob implements ShouldQueue
      */
     public function handle()
     {
-        $maisChatApiUtil = new MaisChatApiUtil;
+        $maisChatApiUtil = new MaisChatApiUtil($this->nps->gateway_channel);
 
         $response = $maisChatApiUtil
         ->sendTemplateMetaCloud([

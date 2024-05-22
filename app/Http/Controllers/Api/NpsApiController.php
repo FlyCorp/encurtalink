@@ -118,6 +118,12 @@ class NpsApiController extends Controller
      *                     example="TakeBlip"
      *                 ),
      *                 @OA\Property(
+     *                     property="Gateway_channel",
+     *                     type="string",
+     *                     description="Gateway de envio",
+     *                     example="Nao estereis"
+     *                 ),
+     *                 @OA\Property(
      *                     property="Config_number",
      *                     type="string",
      *                     description="Número de telefone do cliente",
