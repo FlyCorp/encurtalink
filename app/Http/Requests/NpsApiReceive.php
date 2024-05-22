@@ -73,7 +73,7 @@ class NpsApiReceive extends FormRequest
             ],
             'Gateway_channel' => [
                 'required_if:Config_gateway,MaisChat',
-                Rule::in(['Estereis', 'Nao estereis']),
+                Rule::in(['Estereis', 'Nao estereis'])  ,
             ],
             'Config_number' => [
                 'required',
