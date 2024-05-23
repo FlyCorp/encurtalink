@@ -20,7 +20,7 @@ class SanitizerNps
             "order_date"            => $data["Order_date"],
             "config_process_in"     => $data["Config_process-in"],
             "config_gateway"        => $data["Config_gateway"],
-            "gateway_channel"       => $data["Gateway_channel"] ? $data["Gateway_channel"] : null,
+            "gateway_channel"       => array_key_exists("Gateway_channel", $data) ? $data["Gateway_channel"] : null,
             "config_number"         => $data["Config_number"],
         ];
     }
