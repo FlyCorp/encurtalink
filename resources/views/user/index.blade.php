@@ -62,7 +62,7 @@
                                                     rx="1" fill="currentColor"></rect>
                                             </svg>
                                         </span>
-                                        <!--end::Svg Icon-->Novo link
+                                        <!--end::Svg Icon-->Novo usuário
                                     </a>
                                     <!--end::Add subscription-->
                                 </div>
