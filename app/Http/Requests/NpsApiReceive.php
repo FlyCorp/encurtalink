@@ -52,7 +52,7 @@ class NpsApiReceive extends FormRequest
             'Client_city'    => 'required',
             'Order_company'     => [
                 'required',
-                Rule::in(['Central Farma', 'Central Farma - Ipatinga', 'Central Farma - Caratinga', 'Central Nutrition', 'Harmonize']),
+                Rule::in(['Central Farma', 'Central Farma - Ipatinga', 'Central Farma - Caratinga', 'Central Farma - Injetáveis', 'Central Nutrition', 'Harmonize']),
             ],
             'Order_number'    => 'required',
             'Order_value' => [
