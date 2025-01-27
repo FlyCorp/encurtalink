@@ -8,8 +8,6 @@ use App\Services\ApiClient;
 class MaisChatApiUtil
 {
     protected $apiClient, $channel;
-    const AUTHORIZATION_ESTEREIS = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnQiOiI2NWEwMzE5YTNmYjNkNDViMjdmMTljMmUiLCJuYW1lIjoiQ2VudHJhbCBJbmpldGF2ZWlzIiwiY25waiI6Ijc0NTMxMjk1MDAwMTY5IiwiaWF0IjoxNzA0OTk3Mjc0fQ.OwBCSUxg0pFlnqHtDTpmrK7eOfgxuxTUFblrVMk6lRo";
-    const AUTHORIZATION_NAOESTEREIS    = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnQiOiI2NTIwM2FjNTZkZDRmMzBmNGFmNzUwMDUiLCJuYW1lIjoiQ2VudHJhbCBGYXJtYSIsImNucGoiOiIwMzIzMDc3MTAwMDE2MyIsImlhdCI6MTY5NjYxMTAxM30.w58uEcMtqYUnXoLsi8D19quIUKe_Yd_2hsaVpJdhxbc";
     protected $maisChatClient;
 
     protected $headers, $config;
@@ -25,23 +23,23 @@ class MaisChatApiUtil
         $this->headers = [
             'Accept'        => 'application/json',
             'Content-Type'  => 'application/json',
-            'Authorization' => 'Bearer ' . ($this->channel == "Estereis" ? self::AUTHORIZATION_ESTEREIS : self::AUTHORIZATION_NAOESTEREIS),
+            'Authorization' => 'Bearer ' . ($this->channel == "Estereis" ? config('maischat.estereis.authorization') : config('maischat.nao_estereis.authorization')),
         ];
 
         switch ($channel) {
             case 'Nao estereis':
                 $this->config = [
-                    "appId" => "149582271566762",
-                    "source" => "553138012040",
-                    "token" => "EAASYWLJqc1YBO1jOZB26n6StKhcZCKCkAYm2GUbEKnaUsVLgvd5ftcx7NK6IEwYX3ESZAyK1IbaKZAHGoOdiviYMxnScJOXiydIbKbbO9O8ENPsb8bn0w6Y3FLsAn2Di6tXxNhOPEngiHrqxCcOkJp8P864J7r7E4G5LR6VZAb1sZBunZBwXcqDBdJ4e8l3mgyIbxBvhwZBckuZA7AF7z",
+                    "appId" => config('maischat.nao_estereis.appid'),
+                    "source" => config('maischat.nao_estereis.source'),
+                    "token" => config('maischat.nao_estereis.token'),
                 ];
                 break;
 
             default:
                 $this->config = [
-                    "appId" => "216551731543973",
-                    "source" => "553190686031",
-                    "token" => "EAAEFUAKCeZAUBOw4KgUL1Ls31EdmV4Wi623sCR0m0P05Q3VTGiXZBAHnQLfQ8L9HpmQxrPcHW6Bzz8dsOQBEqr5DWZAXBiD8jHgIPD26X5t4hISbVWW4RzRUaHXdzqQDVfcHmUZBHuT28ZCUOuUbBl5ZBzMy6UNKwUfzC1lZCIAZBJ8aHX0yNs5PL8SGAfbAtgs2",
+                    "appId" => config('maischat.estereis.appid'),
+                    "source" => config('maischat.estereis.source'),
+                    "token" => config('maischat.estereis.token'),
                 ];
                 break;
         }
@@ -81,7 +79,7 @@ class MaisChatApiUtil
                 $this->config,
                 [
                     "type" => "apiTemplate",
-                    "broker" => "wppCloudAPI",
+                    "broker" => $broker,
                     "destination" => $data['pacient_whatsapp'],
                     "template" => [
                         "name" => "nps_360v2",
