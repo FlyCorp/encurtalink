@@ -50,7 +50,11 @@ class MaisChatWhatsappSendMessageJob implements ShouldQueue
         if(isset($response["data"]["msgId"])){
             $this->nps->response = json_encode($response, true);
             $this->nps->save();
+
+            \Log::channel('maischat')->info("{$this->nps->config_number} " . json_encode($response, true));
         }else{
+            \Log::channel('maischat')->error("{$this->nps->config_number} " . json_encode($response, true));
+
             throw new \Exception($response["data"]["error"]["error"]["message"], $response["data"]["error"]["error"]["code"]);
         }
     }

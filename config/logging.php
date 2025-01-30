@@ -62,6 +62,12 @@ return [
             'level' => 'critical',
         ],
 
+        'maischat' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/maischat.log'),
+            'level' => 'info',
+        ],
+
         'papertrail' => [
             'driver' => 'monolog',
             'level' => 'debug',
