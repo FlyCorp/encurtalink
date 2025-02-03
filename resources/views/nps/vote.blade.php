@@ -117,7 +117,7 @@
       /* CONSUMIDOR */
       section.nps {
         min-height: 50vh;
-        background: url("/assets/media/nps/bg.png") no-repeat;
+        background: url("{{ asset(config('nps.path')) }}/bg-header.png") no-repeat;
         background-size: cover;
         background-position-x: center;
         background-position-y: top;
@@ -127,7 +127,7 @@
 
       section.nps-footer {
         height: 60vh;
-        background: url("/assets/media/nps/bg-footer.png") no-repeat;
+        background: url("{{ asset(config('nps.path')) }}/bg-footer.png") no-repeat;
         background-size: cover;
         background-position-x: center;
         background-position-y: top;
