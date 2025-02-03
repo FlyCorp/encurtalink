@@ -47,7 +47,7 @@ class MaisChatWhatsappSendMessageJob implements ShouldQueue
             "prescription"      => "Testando NPS",
         ]);
 
-        if(isset($response["data"]["msgId"])){
+        if(isset($response["data"]["msgId"]) && !isset($response["data"]["error"])){
             $this->nps->response = json_encode($response, true);
             $this->nps->save();
 
