@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\NpsApiReceive;
+use App\Http\Requests\NpsApiUpdate;
 use App\Http\Sanitizers\SanitizerNps;
 use App\NpsLink;
 use App\Jobs\ProcessNpsJob;
@@ -185,36 +186,6 @@ class NpsApiController extends Controller
      *                     example="Vendas B2B"
      *                 ),
      *                 @OA\Property(
-     *                     property="Client_name",
-     *                     type="string",
-     *                     description="Nome do cliente",
-     *                     example="Jane Doe"
-     *                 ),
-     *                 @OA\Property(
-     *                     property="Client_document",
-     *                     type="string",
-     *                     description="Documento do cliente",
-     *                     example="12027042636"
-     *                 ),
-     *                 @OA\Property(
-     *                     property="Client_representant",
-     *                     type="string",
-     *                     description="Representante do cliente",
-     *                     example="Fulano de tal"
-     *                 ),
-     *                 @OA\Property(
-     *                     property="Client_uf",
-     *                     type="string",
-     *                     description="Sigla do estado ao qual o cliente pertence",
-     *                     example="MG"
-     *                 ),
-     *                 @OA\Property(
-     *                     property="Client_city",
-     *                     type="string",
-     *                     description="Cidade à qual o cliente pertence",
-     *                     example="Ipatinga"
-     *                 ),
-     *                 @OA\Property(
      *                     property="Order_company",
      *                     type="string",
      *                     description="Unidade de origem do pedido",
@@ -225,26 +196,6 @@ class NpsApiController extends Controller
      *                     type="string",
      *                     description="Número do pedido",
      *                     example="123456"
-     *                 ),
-     *                 @OA\Property(
-     *                     property="Order_value",
-     *                     type="string",
-     *                     description="Valor total do pedido",
-     *                     example="580.00"
-     *                 ),
-     *                 @OA\Property(
-     *                     property="Order_date",
-     *                     type="string",
-     *                     format="date",
-     *                     description="Data de faturamento do pedido",
-     *                     example="2023-12-13"
-     *                 ),
-     *                 @OA\Property(
-     *                     property="Config_process-in",
-     *                     type="string",
-     *                     format="date-time",
-     *                     description="Data e hora para processamento de envio",
-     *                     example="2023-12-13 14:00"
      *                 ),
      *                 @OA\Property(
      *                     property="Config_gateway",
@@ -271,7 +222,7 @@ class NpsApiController extends Controller
      *     @OA\Response(response="422", description="Um ou mais campos inválidos")
      * )
      */
-    public function update(NpsApiReceive $request)
+    public function update(NpsApiUpdate $request)
     {
         $data = $this->sanitizerNps->postReceive($request->validated());
 
