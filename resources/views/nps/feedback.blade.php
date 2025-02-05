@@ -367,7 +367,7 @@
         background: #259433;
       }
     </style>
-    <title>NPS - Central Nutrition</title>
+    <title>NPS - {{config('app.name')}}</title>
   </head>
   <body>
     <section class="nps">
@@ -379,7 +379,7 @@
         </div>
         <div class="row pt-4 pt-md-5 justify-content-center pb-2">
           <div class="col-lg-9 col-xl-8 col-xxl-7 text-center">
-            <h2>Muito obrigado, continuaremos empenhados em oferecer qualidade e excelência com base nos feedbacks recebidos.</h2>
+            <h2>Muito obrigada, continuaremos nos empenhando para oferecer qualidade e excelência com base nos feedbacks recebidos.</h2>
           </div>
         </div>
         <div class="row pt-4 pt-md-5 pb-5 pb-lg-0 justify-content-center">
@@ -389,33 +389,6 @@
         </div>
       </div>
     </section>
-    <section class="nps-footer">
-      <div class="container h-100">
-        <div class="row align-items-end h-100 pb-3">
-          <div>
-            <div class="col-12 text-center">
-              <img src="{{asset(config('nps.path') . '/footer.png')}}" alt="" class="img-footer"/>
-            </div>
-            <div class="col-12 pt-2 text-center">
-              <a href="{{config('nps.socials.whatsapp')}}" class="link-social">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-              <a href="{{config('nps.socials.facebook')}}" class="link-social">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="{{config('nps.socials.instagram')}}" class="link-social">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="{{config('nps.socials.linkedin')}}" class="link-social">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="{{config('nps.socials.youtube')}}" class="link-social">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    @include('nps.partials.footer')
   </body>
 </html>

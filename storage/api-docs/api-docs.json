@@ -108,6 +108,108 @@
                 }
             }
         },
+        "/api/nps/update": {
+            "post": {
+                "tags": [
+                    "NPS"
+                ],
+                "summary": "Atualizar determinado NPS de uma campanha",
+                "description": "Atualiza os dados de um NPS sem gerar um novo disparo",
+                "operationId": "b26cc7901ed7307cb26712c14e9047d1",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "Campaign_name": {
+                                        "description": "Título da campanha",
+                                        "type": "string",
+                                        "example": "Vendas B2B"
+                                    },
+                                    "Client_name": {
+                                        "description": "Nome do cliente",
+                                        "type": "string",
+                                        "example": "Jane Doe"
+                                    },
+                                    "Client_document": {
+                                        "description": "Documento do cliente",
+                                        "type": "string",
+                                        "example": "12027042636"
+                                    },
+                                    "Client_representant": {
+                                        "description": "Representante do cliente",
+                                        "type": "string",
+                                        "example": "Fulano de tal"
+                                    },
+                                    "Client_uf": {
+                                        "description": "Sigla do estado ao qual o cliente pertence",
+                                        "type": "string",
+                                        "example": "MG"
+                                    },
+                                    "Client_city": {
+                                        "description": "Cidade à qual o cliente pertence",
+                                        "type": "string",
+                                        "example": "Ipatinga"
+                                    },
+                                    "Order_company": {
+                                        "description": "Unidade de origem do pedido",
+                                        "type": "string",
+                                        "example": "Central Farma"
+                                    },
+                                    "Order_number": {
+                                        "description": "Número do pedido",
+                                        "type": "string",
+                                        "example": "123456"
+                                    },
+                                    "Order_value": {
+                                        "description": "Valor total do pedido",
+                                        "type": "string",
+                                        "example": "580.00"
+                                    },
+                                    "Order_date": {
+                                        "description": "Data de faturamento do pedido",
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "2023-12-13"
+                                    },
+                                    "Config_process-in": {
+                                        "description": "Data e hora para processamento de envio",
+                                        "type": "string",
+                                        "format": "date-time",
+                                        "example": "2023-12-13 14:00"
+                                    },
+                                    "Config_gateway": {
+                                        "description": "Gateway de envio",
+                                        "type": "string",
+                                        "example": "TakeBlip"
+                                    },
+                                    "Gateway_channel": {
+                                        "description": "Gateway de envio",
+                                        "type": "string",
+                                        "example": "Nao estereis"
+                                    },
+                                    "Config_number": {
+                                        "description": "Número de telefone do cliente",
+                                        "type": "string",
+                                        "example": "5531993714728"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Nps atualizado com sucesso"
+                    },
+                    "422": {
+                        "description": "Um ou mais campos inválidos"
+                    }
+                }
+            }
+        },
         "/api/nps/homolog": {
             "post": {
                 "tags": [

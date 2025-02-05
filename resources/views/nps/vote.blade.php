@@ -117,7 +117,7 @@
       /* CONSUMIDOR */
       section.nps {
         min-height: 50vh;
-        background: url("/assets/media/nps/bg.png") no-repeat;
+        background: url("{{ asset(config('nps.path')) }}/bg-header.png") no-repeat;
         background-size: cover;
         background-position-x: center;
         background-position-y: top;
@@ -127,7 +127,7 @@
 
       section.nps-footer {
         height: 60vh;
-        background: url("/assets/media/nps/bg-footer.png") no-repeat;
+        background: url("{{ asset(config('nps.path')) }}/bg-footer.png") no-repeat;
         background-size: cover;
         background-position-x: center;
         background-position-y: top;
@@ -204,48 +204,48 @@
       }
 
       section.nps .voteNps .voto-list-item:nth-child(1) {
-        background: #c90018;
+        background: #ff2600;
         margin: 0;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(2) {
-        background: #d5202a;
+        background: #ff2600;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(3) {
-        background: #fd3817;
+        background: #fb6212;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(4) {
-        background: #fd590d;
+        background: #fb6212;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(5) {
-        background: #fe980a;
+        background: #fb6212;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(6) {
-        background: #febf00;
+        background: #f79f23;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(7) {
-        background: #ebd900;
+        background: #fac813;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(8) {
-        background: #e2dd24;
+        background: #fac813;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(9) {
-        background: #b1ce07;
+        background: #fac813;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(10) {
-        background: #97c21c;
+        background: #7fd100;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(11) {
-        background: #10ac32;
+        background: #00b500;
       }
 
       section.nps .voteNps .voto-list-item:hover {
@@ -367,7 +367,7 @@
         background: #259433;
       }
     </style>
-    <title>NPS - Central Nutrition</title>
+    <title>NPS - {{config('app.name')}}</title>
   </head>
   <body>
     <section class="nps">
@@ -403,33 +403,6 @@
         </div>
       </div>
     </section>
-    <section class="nps-footer">
-      <div class="container h-100">
-        <div class="row align-items-end h-100 pb-3">
-          <div>
-            <div class="col-12 text-center">
-              <img src="{{asset(config('nps.path') . '/footer.png')}}" alt="" class="img-footer"/>
-            </div>
-            <div class="col-12 pt-2 text-center">
-              <a href="{{config('nps.socials.whatsapp')}}" class="link-social">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-              <a href="{{config('nps.socials.facebook')}}" class="link-social">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="{{config('nps.socials.instagram')}}" class="link-social">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="{{config('nps.socials.linkedin')}}" class="link-social">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="{{config('nps.socials.youtube')}}" class="link-social">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    @include('nps.partials.footer')
   </body>
 </html>
