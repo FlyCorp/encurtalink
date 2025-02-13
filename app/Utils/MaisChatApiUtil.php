@@ -7,7 +7,7 @@ use App\Services\ApiClient;
 
 class MaisChatApiUtil
 {
-    protected $apiClient, $channel;
+    protected $apiClient, $channel, $company;
     protected $maisChatClient;
 
     protected $headers, $config;
@@ -15,31 +15,34 @@ class MaisChatApiUtil
     /**
      * Undocumented function
      */
-    public function __construct($channel = "Estereis")
+    public function __construct($channel = "Estereis", $company = "cfarma")
     {
         $this->apiClient = new ApiClient('https://apimaischat.maischat.io/v2/');
         $this->channel = $channel;
+        $this->company = $company;
 
         $this->headers = [
             'Accept'        => 'application/json',
             'Content-Type'  => 'application/json',
-            'Authorization' => 'Bearer ' . ($this->channel == "Estereis" ? config('maischat.estereis.authorization') : config('maischat.nao_estereis.authorization')),
+            'Authorization' => 'Bearer ' . ($this->channel == "Estereis"
+                ? config("maischat.{$company}.estereis.authorization")
+                : config("maischat.{$company}.nao_estereis.authorization")),
         ];
 
         switch ($channel) {
             case 'Nao estereis':
                 $this->config = [
-                    "appId" => config('maischat.nao_estereis.appid'),
-                    "source" => config('maischat.nao_estereis.source'),
-                    "token" => config('maischat.nao_estereis.token'),
+                    "appId" => config("maischat.{$company}.nao_estereis.appid"),
+                    "source" => config("maischat.{$company}.nao_estereis.source"),
+                    "token" => config("maischat.{$company}.nao_estereis.token"),
                 ];
                 break;
 
-            default:
+            default: // Estereis
                 $this->config = [
-                    "appId" => config('maischat.estereis.appid'),
-                    "source" => config('maischat.estereis.source'),
-                    "token" => config('maischat.estereis.token'),
+                    "appId" => config("maischat.{$company}.estereis.appid"),
+                    "source" => config("maischat.{$company}.estereis.source"),
+                    "token" => config("maischat.{$company}.estereis.token"),
                 ];
                 break;
         }
@@ -82,7 +85,7 @@ class MaisChatApiUtil
                     "broker" => $broker,
                     "destination" => $data['pacient_whatsapp'],
                     "template" => [
-                        "name" => "nps_360v2",
+                        "name" => config("maischat.{$this->company}.default_template"),
                         "language" => "pt_BR",
                         "components" => [
                             [

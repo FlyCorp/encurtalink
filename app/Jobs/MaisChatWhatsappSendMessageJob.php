@@ -35,7 +35,16 @@ class MaisChatWhatsappSendMessageJob implements ShouldQueue
      */
     public function handle()
     {
-        $maisChatApiUtil = new MaisChatApiUtil($this->nps->gateway_channel);
+        $config = [
+            'Central Farma' => 'cfarma',
+            'Central Farma - Ipatinga' => 'cfarma',
+            'Central Farma - Caratinga' => 'caratinga',
+            'Central Farma - Injetáveis' => 'cfarma',
+            'Central Nutrition' => 'cnutrition',
+            'Harmonize' => 'harmonize'
+        ];
+
+        $maisChatApiUtil = new MaisChatApiUtil($this->nps->gateway_channel, $config[$this->nps->order_company]);
 
         $response = $maisChatApiUtil
         ->sendTemplateMetaCloud([
