@@ -165,7 +165,7 @@ class NpsApiController extends Controller
             "data" => [
                 "link" => route("nps.show", ["uuid" => $nps->uuid])
             ],
-        ]);
+        ], 200);
     }
 
     /**
@@ -246,7 +246,7 @@ class NpsApiController extends Controller
             "data" => [
                 "link" => route("nps.show", ["uuid" => $nps->uuid])
             ],
-        ]);
+        ], 200);
     }
 
     /**

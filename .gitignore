@@ -13,3 +13,4 @@ npm-debug.log
 yarn-error.log
 /public/cron.log
 nps.log
+tests-documentation.txt

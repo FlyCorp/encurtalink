@@ -12,9 +12,6 @@ class MaisChatApiUtil
 
     protected $headers, $config;
 
-    /**
-     * Undocumented function
-     */
     public function __construct($channel = "Estereis", $company = "cfarma")
     {
         $this->apiClient = new ApiClient('https://apimaischat.maischat.io/v2/');
@@ -24,28 +21,28 @@ class MaisChatApiUtil
         $this->headers = [
             'Accept'        => 'application/json',
             'Content-Type'  => 'application/json',
-            'Authorization' => 'Bearer ' . ($this->channel == "Estereis"
-                ? config("maischat.{$company}.estereis.authorization")
-                : config("maischat.{$company}.nao_estereis.authorization")),
+            'Authorization' => 'Bearer ' . $this->getAuthorizationToken(),
         ];
 
-        switch ($channel) {
-            case 'Nao estereis':
-                $this->config = [
-                    "appId" => config("maischat.{$company}.nao_estereis.appid"),
-                    "source" => config("maischat.{$company}.nao_estereis.source"),
-                    "token" => config("maischat.{$company}.nao_estereis.token"),
-                ];
-                break;
+        $this->config = $this->getConfig();
+    }
 
-            default: // Estereis
-                $this->config = [
-                    "appId" => config("maischat.{$company}.estereis.appid"),
-                    "source" => config("maischat.{$company}.estereis.source"),
-                    "token" => config("maischat.{$company}.estereis.token"),
-                ];
-                break;
-        }
+    private function getAuthorizationToken()
+    {
+        return $this->channel == "Estereis"
+            ? config("maischat.{$this->company}.estereis.authorization")
+            : config("maischat.{$this->company}.nao_estereis.authorization");
+    }
+
+    private function getConfig()
+    {
+        $configKey = $this->channel == "Nao estereis" ? "nao_estereis" : "estereis";
+
+        return [
+            "appId" => config("maischat.{$this->company}.{$configKey}.appid"),
+            "source" => config("maischat.{$this->company}.{$configKey}.source"),
+            "token" => config("maischat.{$this->company}.{$configKey}.token"),
+        ];
     }
 
     /**
