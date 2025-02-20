@@ -213,23 +213,23 @@
       }
 
       section.nps .voteNps .voto-list-item:nth-child(3) {
-        background: #fb6212;
+        background: #ff2600;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(4) {
-        background: #fb6212;
+        background: #ff2600;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(5) {
-        background: #fb6212;
+        background: #ff2600;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(6) {
-        background: #f79f23;
+        background: #ff2600;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(7) {
-        background: #fac813;
+        background: #ff2600;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(8) {
@@ -241,7 +241,7 @@
       }
 
       section.nps .voteNps .voto-list-item:nth-child(10) {
-        background: #7fd100;
+        background: #00b500;
       }
 
       section.nps .voteNps .voto-list-item:nth-child(11) {
